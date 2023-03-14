@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box">111111</div>
+  <script>
+    var box =document.querySelector('#box')
+    // 4.
+    // for(var i =0;i<liNodes.length;i++){
+    //   liNodes[i].onclick=function(){
+    //     console.log(this)
+    //   }
+    // }
+    // this出现场景
+    // 1.普通函数调用 this指向window
+    // 2.对象的方法调用 this指向这个对象
+    // 3.构造函数当中  this指向实例化对象
+    // 4.事件回调当中 this指向咱们的事件源
+    // 5.使用call apply bind 任意修改this指向
+
+    // 1.
+    // function fn(){
+    //   console.log(this)
+    // }
+    // fn()
+
+    // 2.
+      // var obj = {
+      //   fn:function(){
+      //     console.log(this)
+      //   }
+      // }
+      // obj.fn()
+
+    // 3.
+    // function Person(name){
+    //   this.name = '张三'
+    // }
+    // Person.prototype.eat=function(){
+    //   // this
+    //   console.log(this,'this')
+    // }
+    // var p1 = new Person('李四')
+    // // p1.eat()
+    // Person.prototype.eat()
+
+    // 5.
+    var obj ={
+      eat:function(){
+        console.log(this)
+      }
+    }
+    var arr = [1,2,3]
+    obj.eat.call(arr)
+  </script>
+</body>
+</html>

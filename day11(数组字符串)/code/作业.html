@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1.使用构造函数创建两个同类别的手机对象（要求品牌和方法在原型当中定义共享使用）;然后把这份代码的原型链图 每人画一遍(10之前)
+    function Phone(name,price){
+      this.name=name
+      this.price=price
+    }
+    Phone.prototype.brand = '华为'
+    Phone.prototype.playGame = function(){
+      console.log('可以打游戏')
+    }
+    // 给Object显示原型对象加属性和方法也是可以找到的  但是这么做不好 因为所有的实例都可以找到这 会混乱
+    Object.prototype.color = '红色'
+    var p1 = new Phone('P50 Pocket',8000)
+    var p2 = new Phone('Mate 40',3000)
+    console.log(p1.color)
+    console.log(p2.color)
+
+   
+  </script>
+</body>
+</html>

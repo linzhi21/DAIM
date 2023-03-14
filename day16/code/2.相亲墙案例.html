@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    td {
+      padding: 8px;
+    }
+    #wrap{
+      margin: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <table>
+      <thead>
+        <h2>相亲墙</h2>
+      </thead>
+      <tr>
+        <th>姓名</th>
+        <th>特点</th>
+        <th>操作</th>
+      </tr>
+      <tr>
+        <td>志博</td>
+        <td>温柔 帅</td>
+        <!-- a标签 点击 不想让他跳转 href属性写成 javascript:; -->
+        <td><a href="javascript:;">删除</a></td>
+      </tr>
+      <tr>
+        <td>谢峰</td>
+        <td>有钱 八块腹肌</td>
+        <td><a href="javascript:;">删除</a></td>
+      </tr>
+      <tr>
+        <td>肖涵</td>
+        <td>唱跳rap</td>
+        <td><a href="javascript:;">删除</a></td>
+      </tr>
+    </table>
+    <input type="text" placeholder="请输入你的姓名"><br>
+    <input type="text" placeholder="请输入你的特点"><br>
+    <button>添加信息</button>
+  </div>
+  <script>
+        tbody.onclick=function(e){
+        e = e || window.event
+        if(e.target.nodeName === 'A'){
+          // 找到这个a对应的那个tr  删除tr
+          console.log(e.target.parentNode.parentNode)
+          tbody.removeChild(e.target.parentNode.parentNode)
+        }
+      }
+    
+    window.onload=function(){
+      var inps = document.querySelectorAll('input')
+      var btn = document.querySelector('button')
+      var tbody = document.querySelector('tbody') //dom上是有tbody标签的
+      // 添加
+      btn.onclick=function(){
+        // 获取用户输入的姓名和特点
+        var name = inps[0].value
+        var trait = inps[1].value
+        // 判断用户输入的内容是不是正确的
+        if(name.trim()&&trait.trim()){
+          // 创建tr结构
+          var trNode = document.createElement('tr')
+          // 创建姓名的td
+          var tdNode = document.createElement('td')
+          tdNode.innerHTML = name
+          trNode.appendChild(tdNode)
+          // 创建特点的td
+          var tdNode = document.createElement('td')
+          tdNode.innerHTML = trait
+          trNode.appendChild(tdNode)
+          // 创建删除的td
+          var tdNode = document.createElement('td')
+          tdNode.innerHTML = '<a href="javascript:;">删除</a>'
+          trNode.appendChild(tdNode)
+          // 把咱们自己创建的tr放到tbody中 (树上)
+          tbody.appendChild(trNode)
+        }else{
+          alert('请输入你的姓名和特点')
+        }
+        inps[0].value = ''
+        inps[1].value = ''
+      }
+      // 删除
+      tbody.onclick=function(e){
+        e = e || window.event
+        if(e.target.nodeName === 'A'){
+          // 找到这个a对应的那个tr  删除tr
+          console.log(e.target.parentNode.parentNode)
+          tbody.removeChild(e.target.parentNode.parentNode)
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

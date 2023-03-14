@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 有一个数组装着2023年所有人的年龄，2024年以后，每个人的年龄都增加1岁 
+    // var arr = [18,19,20,21]
+    // var newArr=arr.map(function(item,index){
+    //   // return item+1
+    //   return ++item
+    // })
+      
+    // var arr=[
+    //   {name:'张三',age:18},
+    //   {name:'李四',age:19},
+    //   {name:'王五',age:20},
+    //   {name:'赵六',age:21},
+    // ]
+    // var newArr =arr.map(function(item,index){
+    //   return {
+    //     name:item.name,
+    //     age:item.age+1
+    //   }
+    // })
+    // console.log(newArr)
+
+    // 我们得到一组年龄，从中过滤出未成年的
+    // var arr = [16,17,20,21]
+    // var newArr = arr.filter(function(item,index){
+    //   return item>=18
+    // })
+
+    // var arr=[
+    //   {name:'张三',age:16},
+    //   {name:'李四',age:17},
+    //   {name:'王五',age:20},
+    //   {name:'赵六',age:21},
+    // ]
+    // var newArr = arr.filter(function(item,index){
+    //   return item.age>=18
+    // })
+    // console.log(newArr) 
+
+    // 我们得到一组年龄，如果所有人都成年了，那么就开启成人网吧模式，否则进入儿童模式
+    // var arr = [16,19,20,21]
+    // var flag = arr.every(function(item,index){
+    //   return item>=18
+    // })
+  
+    // var arr = [
+    //   { name: '张三', age: 18 },
+    //   { name: '李四', age: 16 },
+    //   { name: '王五', age: 20 },
+    //   { name: '赵六', age: 21 },
+    // ]
+    // var flag = arr.every(function(item,index){
+    //   return item.age>=18
+    // })
+
+    // if (flag) {
+    //   console.log('开启成人网吧模式')
+    // } else {
+    //   console.log('儿童模式')
+    // }
+     
+		// 我们得到一组年龄，如果有一个未成年，就进入儿童模式
+    // var arr = [18,19,20,21]
+    // var flag = arr.some(function(item,index){
+    //   return item<18
+    // })
+    // var arr = [
+    //   { name: '张三', age: 18 },
+    //   { name: '李四', age: 16 },
+    //   { name: '王五', age: 20 },
+    //   { name: '赵六', age: 21 },
+    // ]
+    // var flag = arr.some(function(item,index){
+    //   return item.age<18
+    // })
+
+    // if(flag){
+    //   console.log('进入儿童模式')
+    // }
+
+
+
+		// 我们得到一组年龄，如果有一个未成年，就进入儿童模式，并找到这个未成年的信息
+    var arr = [16,19,15,21]
+    // var one = arr.find(function(item,index){
+    //   return item<18
+    // })
+
+    // var arr = [
+    //   { name: '张三', age: 18 },
+    //   { name: '李四', age: 16 },
+    //   { name: '王五', age: 20 },
+    //   { name: '赵六', age: 21 },
+    // ]
+    // var one =arr.find(function(item,index){
+    //   return item.age<18
+    // })
+    // console.log(one)
+
+		// 求数组中每个人年龄的和
+    var arr = [16,19,20,21]
+    // var num =0
+    // arr.forEach(function(item){
+    //   num+=item
+    // })
+    
+    // var arr = [
+    //   { name: '张三', age: 18 },
+    //   { name: '李四', age: 16 },
+    //   { name: '王五', age: 20 },
+    //   { name: '赵六', age: 21 },
+    // ]
+    // arr.forEach(function(item,index){
+    //   num+=item.age
+    // })
+    // console.log(num)
+   
+    // 正常情况reduce
+    // var result = arr.reduce(function(prev,item,index){
+    //   return prev+item
+    // },0)
+    // var result=arr.reduce(function(prev,item,index){
+    //   return prev+item.age
+    // },0)
+    // 特殊情况reduce
+    // var result =arr.reduce(function(prev,item,index){
+    //   return prev+item
+    // })
+    var result = arr.reduce(function(prev,item,index){
+      return {
+        age:prev.age+item.age
+      }
+    })
+    console.log(result.age)
+  </script>
+</body>
+
+</html>

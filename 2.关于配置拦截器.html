@@ -1,0 +1,42 @@
+<!-- 关于  axios详情配置  可参考官网  https://www.axios-http.cn/docs/intro-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        //axios 请求拦截器  类似地铁安检
+        // config 配置项  在请求之前 再做些什么 包括所有的东西  做了一些配置
+        // 请求失败  请求的响应失败
+        axios.interceptors.request.use((config)=>{
+            config.baseURL = '公共接口'
+            return config
+        })
+
+        //axios 响应拦截器 (重要)  两个回调
+        axios.interceptors.response.use(
+            // 响应成功的回调
+            (res)=>{
+                // 必须返回  后面要用 不然数据拿不到
+                return res.data   
+            },
+            // 响应失败的回调
+            (err)=>{
+                return new Promise()  
+                // return Promise.reject(err)  直接返回一个失败的Promise  
+                // 但是发请求得用 try catch 包裹  用来捕捉错误
+            }
+        )
+
+        async function test(){
+            let res = axios.get('接口')
+        }
+    </script>
+</body>
+</html>

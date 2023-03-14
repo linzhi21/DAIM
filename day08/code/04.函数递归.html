@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 函数递归
+
+    // 不合理使用递归
+    // 一个函数内部的函数体又调用自己 爆栈
+    // function fn(){
+    //   console.log('递归函数')
+    //   fn()
+    // }
+    // fn()
+     
+    // 合理使用递归(两者必须同时满足)
+    // 1.你要有一个结束条件
+    // 2.还要有一个趋近于结束条件的趋势
+    // var num =1
+    // function fn(){
+    //   if(num>10){
+    //     return 
+    //   }
+    //   console.log('我爱你')
+    //   num++
+    //   fn()
+    // }
+    // fn()
+
+    // 案例
+    // function fn (x) {
+    //   if (x == 1) {
+    //     return 16
+    //   }
+    //   return fn(x - 1) - 2
+    // }
+    // console.log(fn(3))
+
+  </script>
+</body>
+
+</html>

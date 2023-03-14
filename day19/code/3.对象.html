@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var a = {};
+    var obj1 = { m: 2 }
+    var obj2 = { n: 2 }
+    var obj3 = function () { };
+
+    // console.log(obj3.toString())
+    a[obj1] = 4   //a['[object Object]'] = 4
+    a[obj2] = 5   //a['[object Object]'] = 5
+    a.name = 'kobe' 
+    a[obj3] = 6;  //a['function () { }'] = 6
+
+
+    console.log(a[obj1])
+    console.log(a) 
+  </script>
+</body>
+
+</html>

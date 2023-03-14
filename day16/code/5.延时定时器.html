@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>清除定时器</button>
+  <script>
+    // 延时定时器 (定时炸弹)
+    // 语法
+    // setTimeout(回调函数,毫秒值)
+    // 执行过程
+    // 等到某个时间 去执行回调函数当中的代码块 一次！！！
+    // 返回值
+    // 每个定时器都会返回一个东西  则个东西就是定时器的id
+    // 因为咱们之后可能在任意位置去清除定时器  所以一定要把定时器返回的id做为全局变量保存
+    var a = 1
+    var b = 2
+    var c = a + b
+    // console.log(c)
+    // var id = null
+
+    // 两秒钟之后再去打印c的值
+    // function fn () {
+    //    id = setTimeout(function () {
+    //     console.log('两秒到了  定时器炸了')
+    //   }, 2000)
+    // }
+    // fn()
+
+    var id = setTimeout(function () {
+        console.log('两秒到了  定时器炸了')
+    }, 2000)
+
+    var id1 = setTimeout(function () {
+        console.log('四秒到了  定时器炸了')
+    }, 4000)
+    // console.log(id,id1)
+
+    var id2 = setTimeout(function () {
+        console.log('五秒到了  定时器炸了')
+    }, 5000)
+    console.log(id,id1,id2)
+
+    // console.log(id)
+    // 1s  === 1000ms
+
+    // 清除定时器
+    // clearTimeout 传递的参数需要是定时器生成的那个id
+    document.querySelector('button').onclick = function () {
+      clearTimeout(id1)
+    }
+  </script>
+</body>
+
+</html>

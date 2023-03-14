@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // arguments 实参伪数组
+    // 是什么：长得像数组 但是不是数组 本质是对象
+    // 存在去哪里:每一个函数内部
+    // 作用：让咱们拿到函数调用时所有的实参
+    // 对于一个函数来说 形参可有可无 因为咱们都可以通过arguments拿到所有的实参，但是基本不用(没有语义化)
+
+    function fn(){
+      console.log(arguments)
+    }
+    fn('伪数组',23,true)
+
+    // function fn(name,age,height){
+    //   // 参数有语义化 你知道它要传递进来的是名字呢还是年龄...
+    //   console.log(name,age,height)
+    // }
+    // fn('张三',23,180)
+
+    // function fn(){
+    //   // 参数无语义化 你不知道她要传递进来的时名字呢还是年龄...
+    //   console.log(arguments[0],arguments[1],arguments[2])
+    // }
+    // fn('李四',18,182)
+
+    // function fn(){
+    //   console.log(arguments.length)
+    // }
+    // fn(89,75,'对象')
+
+    // // 返回两个数的和
+    // function add(){
+    //   return arguments[0]+arguments[1]
+    // }
+    // console.log(add(23,56))
+
+    // 如果实参写了三个 那么就做加法 传了两个就做减法
+    // function computedNum(){
+    //   if(arguments.length==3){
+    //     return arguments[0]+arguments[1]+arguments[2]
+    //   }else if(arguments.length==2){
+    //     // return arguments[0]-arguments[1]-arguments[2]  不可以 因为没传第三个参数
+    //     return arguments[0]-arguments[1]
+    //   }
+    // }
+    // console.log(computedNum(3,6,9),computedNum(2,4))
+
+    // callee 指向其arguments所在的这个函数本身
+    // function add(){
+    //   console.log(arguments.callee==add)
+    // }
+    // add()
+ 
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 第一种方式 使用第三方变量
+    // var num1 = 1;
+    // var num2 = 2;
+    // var num3;
+    // num3 = num1; //复制了一份水 不是倒进去水
+    // console.log(num1,num3)
+    // num1 = num2;
+    // num2 = num3
+    // console.log(num1,num2) //2 1
+
+    var num = 1
+    var num2 = 2
+    var num3 = num  //1
+    // console.log(num,num2,num3);
+    var num1 = num2 //2
+    var num2 = num3 //1
+    console.log(num1,num2);
+
+    // 第二种方式 不适用第三方变量
+    // var a = 1
+    // var b = 2
+    // a = a + b   //a ==> 3  b ==> 2
+    // b = a - b   //a ==> 3  b ==> 1
+    // a = a - b   //a ==> 2  b ==> 1
+    // console.log(a,b) //2  1
+
+
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // 1.普通函数调用this指向window   xxx()
+    // 2.对象的方法当中this指向这个对象  xxx.yyy()
+
+    // 3.构造函数当中this指向实例化对象
+    // 4.使用call apply bind可以任意需修改this指向
+    // 5.事件回调当中的this指向事件源
+
+    // 1.
+    // function fn(){
+    //   console.log(this)
+    //   function fn1(){
+    //     console.log(this)
+    //   }
+    //   fn1()
+    // }
+    // fn()
+
+    // 2.
+    // function fn(){
+    //   var obj = {
+    //     name:'张三',
+    //     run:function(){
+    //       console.log(this)//obj
+    //     }
+    //   }
+    //   console.log(this)//w
+    //   obj.run()//fn
+    // }
+    // fn()
+
+    // 3.
+    // var obj ={
+    //   name:'李四',
+    //   eat:function(){
+    //     console.log(this)//obj
+    //     function fn1(){
+    //       console.log(this)//w
+    //     }
+    //     fn1()
+    //   }
+    // }
+    // obj.eat()
+
+    // function fn(){
+    //   console.log(this)
+    //   function fn1(){
+    //     console.log(this)
+    //   }
+    //   fn1()
+      
+    // }
+    // window.fn()
+
+    // 4.
+    function fn(){
+      var obj ={
+        run:function(){
+          fn2()
+          console.log(this)//obj
+          function fn2(){
+            console.log(this)//w
+          }
+        }
+      }
+      console.log(this)//w
+      obj.run()
+    }
+   fn()
+  </script>
+</body>
+</html>

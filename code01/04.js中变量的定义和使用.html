@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 变量
+    // 是什么：可以理解为是一个容器(水杯)  水杯当中装的内容是值
+    // 本质是开辟了一片内存空间
+    // 变量作用：保存数据(值)
+
+    // 变量的使用
+    // 1.先声明变量 后对变量赋值
+    // var a; //var(定义)了一个变量  变量的名字是a
+    // a = 1; // = 在数学当中是相等的意思  在js当中=代表赋值
+    // // =号出现 一定先执行等号右侧的内容 执行完成后一定会有一个值 他会把这个值赋值给等号左侧的东西(变量)
+    // console.log('哈哈哈') //打印的常量
+    // console.log(a) //打印的是变量 会打印变量身上放置的这个值 而不是a这个名字
+
+    // 2.声明变量的同时赋值  *************
+    // var a = 1;
+    // // 这种方式就和第一种方式是一样的 只不过是把两行内容写成了一行
+    a = 1+2
+    a = 'js'
+    console.log(a)
+
+    // 3. 不带var声明变量  有问题！！！  有坑！！！
+    a = 1;
+    console.log(a)
+
+    // 如果说想一次性定义多个变量
+    var a = 1,b = 2   //就完全等价于var a =1;  var b = 2
+    console.log(a)
+    console.log(b)
+    vara=1,b=2 ,c=3,d=4
+    console.log(a,b,c,d)
+
+    var c = d =3  //完全等价于 var c = 3; d = 3   声明变量d的时候没有带var  只有c带var
+    console.log(c,d)
+
+    var b=t=2
+    console.log(b,t)
+  </script>
+</body>
+</html>

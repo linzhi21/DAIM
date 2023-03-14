@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // break作用
+
+    // break 在switch语句当中可以跳出switch语句
+    // break 在循环中可以跳出离他最近的一层循环
+
+    for (var i = 0; i < 3; i++) {
+
+      for (var j = 0; j < 3; j++) {
+        if (i == 1) {
+          break
+        }
+        console.log(j, 'j')
+      }
+
+      console.log(i, 'i')
+    }
+    console.log('-------------------')
+
+    
+    // for (var i = 0; i < 3; i++) {
+
+    //   for (var j = 0; j < 3; j++) {
+    //     if (j == 2) {
+    //       break
+    //     }
+    //     console.log(j, 'j')
+    //   }
+
+    //   console.log(i, 'i')
+    // }
+
+
+    for (var i = 0; i < 3; i++) {
+
+      for (var j = 0; j < 3; j++) {
+        if (i == 1) {
+          continue
+        }
+        console.log(j, 'j')
+      }
+
+      console.log(i, 'i')
+    }
+
+    
+  </script>
+</body>
+
+</html>

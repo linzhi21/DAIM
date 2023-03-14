@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        position: absolute;
+        left: 100px;
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+    }
+
+    /* span{
+       position: absolute;
+       top: 200px;
+       width: 200px;
+       height: 200px;
+       background-color: aquamarine;
+   } */
+    /* table{
+        padding: 10px;
+    }
+    input{
+       margin: 5px 10px 0;
+       padding: 3px;
+    } */
+</style>
+
+<body>
+    <div></div>
+    <!-- <span></span>
+    <button></button> -->
+    <!-- <table>
+    <tbody>
+            <th>姓名</th>
+            <th>特点</th>
+            <th>操作</th>
+        <tr>
+            <td>蔡徐坤</td>
+            <td>唱跳温柔帅</td>
+            <td><a href="javascript:;">删除</a></td>
+        </tr>
+        <tr>
+            <td>安孝燮</td>
+            <td>模特奶狗</td>
+            <td><a href="javascript:;">删除</a></td>
+        </tr>
+        <tr>
+            <td>justin</td>
+            <td>高情商搞笑</td>
+            <td><a href="javascript:;">删除</a></td>
+        </tr>
+    </tbody> -->
+    <!-- </table>
+
+<input type="text">
+<br>
+<input type="text"> -->
+    <script>
+        //     function animate(obj,target){
+        //         clearInterval(obj,timer)
+        //    obj.timer= setInterval(function(){
+        //         if(obj.offsetLeft>=target){
+        //             clearInterval(obj.timer)
+        //         }
+        //         obj.style.left=obj.offsetLeft+1+'px'
+        //     }, 30);
+        //     }
+        //     var div=document.querySelector('div')
+        //     var span=document.querySelector('span')
+        //     animate(div,300);
+        //     animate(span,400)
+
+        var div = document.querySelector('div')
+        var startX = 0 //手指初始坐标
+        var startY = 0
+        var x = 0
+        var y = 0
+        div.addEventListener('touchstart', function (e) {
+            startX = e.targetTouches[0].pageX//手指初始坐标
+            startY = e.targetTouches[0].pageY
+            x = this.offsetLeft//盒子原来位置
+            y = this.offsetTop
+        })
+        div.addEventListener('touchmove', function (e) {
+            var moveX = e.targetTouches[0].pageX-startX
+            var moveY = e.targetTouches[0].pageY-startY
+           this.style.left=x+moveX+'px'
+           this.style.top=y+moveY+'px'
+           e.preventDefault()
+        })
+    </script>
+</body>
+
+</html>

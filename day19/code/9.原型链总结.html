@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1
+    // 1.1  只要是函数都有prototype(显示原型)
+    // 1.2  只要是对象就有__proto__(隐式原型)
+    // 1.3  原型对象身上都有constructor属性(构造器) 指向这个原型所在的那个函数
+
+    // 2
+    // 2.1  所有的函数都是Function的实例
+    // 2.2  所有的原型对象都是Object的实例
+    // 2.3  实例的隐式原型(__proto__)指向其构造函数的显示原型(prototype)
+
+    // 3 特殊
+    // 3.1  Object的显示原型的隐式原型指向null  代表找到头了
+    // 3.2  Function自己new自己 Function的显示原型和隐式原型都指向同一个地址
+  </script>
+</body>
+</html>

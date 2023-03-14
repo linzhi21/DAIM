@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 作用域链
+
+    // 是什么：是查找变量的过程
+    // 作用：查找变量
+    // 查找规则；首先会在自身作用域找，找到就用,
+    //          如果没有，就去上级作用域去找，找到用，找不到接着一直往上找
+    //          直到找到了全局作用域 有就用 没有就报错
+
+    // 作用域是一个相对的概念  fn2的上一级可以理解是fn1+真正全局
+    // 作用域链的顶端一定是全局
+    // 作用域是函数声明时候确定的  假设fn2没调用 这个链上没fn2
+
+    // 作用域是虚拟的  看不见摸不着  但是真实存在
+    // 作用域链 看得见摸得着 后期带着大伙看
+
+    var a = 0;
+    function fn1 () {
+      var a = 1;
+      function fn2 () {
+        var a = 2;
+        function fn3 () {
+          var a = 3;
+          console.log(a)
+        }
+        fn3()
+      }
+      fn2()
+    }
+    fn1()
+
+    var a=0;
+    function fn1(){
+      var a=1;
+      function fn2(){
+        var a=2;
+        function fn3(){
+          var a=3;
+          console.log(a)
+        }
+        fn3()
+      }
+      fn2()
+    }
+    fn1()
+  </script>
+</body>
+
+</html>

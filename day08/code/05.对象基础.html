@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 对象
+    // 是什么：无序的键值对(key: value)集合
+    // 为什么要有对象：描述一个具体的事或者物
+    // 对象的组成部分：属性(键 key)和属性值(值 value)
+    //                属性：本质上都是一个字符串 可以写单引号 双引号 不写引号都可以
+    //                      特殊情况:属性名不符合标识符规则 那么必须加引号(单引号双引号都行)
+    //                属性值：值(常量 变量 表达式 数组 函数 对象)
+    //                    如果某个属性值是一个函数 那么通常会把这个属性叫做对象的方法  
+
+    // 理解：
+    // 1.无论你是哪种方式定义的对象 本质都是new Object() 
+    //   数组定义本质new Array() 函数定义得本质都是new Function()
+    // 2.创建出来得对象都叫做Object的实例化对象 因为这些对象都是Object实例化（new）出来的
+    // 3.通过Object创建出来的对象 类别不固定 可以是一个人 也可以是一只狗 也可以是一个电脑...
+    // 4.对象 描述具体的某一个事或者物
+    //        楼下的汽车 不是  楼下的那辆车牌号为0x100的法拉利 是
+    //        我面前正在上课的这个电脑 是
+
+    // 对象的定义方式
+    // 1.字面量定义
+    // var femaleFriend ={
+    //   name:'翠花',
+    //   age:18,
+    //   'trait':['有钱','养老金得够保险得交','上九天揽月下五洋捉鳖'],
+    //   "eat":function(){
+    //     console.log('吃的不多')
+    //   },
+    //   height:170,
+    //   'weight':300,
+    //   "con-type":6
+    // }
+    // console.log(femaleFriend)
+
+    // 2.构造函数定义
+    // var maleFriend = new Object({
+    //   name:'大壮',
+    //   "age":18,
+    //   'height':180,
+    //   trait:['会跳舞','会rap','帅'],
+    //   weight:160,
+    //   writeCode:function (){
+    //     console.log('写代码很6')
+    //   }
+    // })
+    // console.log(maleFriend)
+var maleFriend=new Object({
+  name:'大壮',
+  age:30,
+  height:180,
+  writeCode:function(){
+    console.log('情绪稳定')
+  }
+})
+console.log(maleFriend['writeCode'])
+    // var dog ={
+    //   name:'小黑',
+    //   age:3,
+    //   color:'黑色',
+    //   run:function(){
+    //     console.log('跑的很快')
+    //   }
+    // }
+    // console.log(dog)
+   
+  </script>
+</body>
+</html>

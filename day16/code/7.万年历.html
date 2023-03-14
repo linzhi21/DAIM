@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1></h1>
+  <script>
+    window.onload=function(){
+      var h1Node = document.querySelector('h1')
+      function getNowDateAndTime(){
+        var date = new Date()
+        var year = date.getFullYear()
+        var month = date.getMonth()+1 //0-11
+        var day = date.getDate()
+        var time = date.toLocaleTimeString()
+        return '现在是:'+year+'年'+month+'月'+day+'号 '+time
+      }
+      
+      setInterval(function(){
+        // 每秒钟都去获取最新的时间
+        // 然后放到h1当中内容展示
+        
+        var time = getNowDateAndTime()
+        h1Node.innerHTML = time
+      },1000)
+      
+    }
+  </script>
+</body>
+</html>

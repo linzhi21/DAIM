@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    img{
+      width: 100px;
+      height: 60px;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <img src="./img/1.jpg" alt="">
+  <script>
+    window.onload=function(){
+      var imgNode = document.querySelector('img')
+      // 绑定移动事件  body html 通常不给他俩添加事件  给document添加  事件会冒泡
+      document.onmousemove=function(e){
+        // 让图片跟着鼠标走
+        e = e || window.event
+        // console.log(e)
+        imgNode.style.left = e.clientX +'px'
+        imgNode.style.top = e.clientY+'px'
+      }
+    }
+  </script>
+</body>
+</html>

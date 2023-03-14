@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 函数  工具(洗衣机)
+    // 对于函数来讲 所有未知的东西 都交给参数
+    // 返回值 就看你用不用或者题意有没有告诉你
+
+
+    // 封装函数打印100遍我爱你
+    // 1.无参无返回值
+    function printLove(){
+      for(var i =0;i<100;i++){
+        console.log('我爱你')
+      }
+    }
+    printLove()
+
+     // 封装函数打印n遍你想要打印的内容
+    //  2. 有参无返回值
+
+     function printContent(n,content){
+      for(var i=0;i<n;i++){
+        console.log(content)
+      }
+     }
+     printContent(5,'我爱你')
+     printContent(8,'二狗子')
+
+
+    // 封装函数返回2+3的和
+    // 3.无参有返回值
+      function add(){
+        return 2+3
+      }
+      console.log(add())
+      // var result = add()
+
+    
+    // 封装函数返回n+m的和
+    // 4.有参有返回值
+    function addNum(n,m){
+      return n+m
+    }
+    console.log(addNum(5,6))
+
+    var result = addNum(11,22)
+    console.log(result)
+  </script>
+</body>
+</html>

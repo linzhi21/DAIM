@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        async function test(){
+
+            //简单写法
+            // let result = axios.get('接口')
+
+            //完整写法
+            let result = await axios({
+                url:'写接口',
+                method:'GET/PUT'
+            })
+
+            // 请求是异步的  给他包裹一个async函数  配合await
+        }
+    </script>
+</body>
+</html>

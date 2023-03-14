@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1
+    function fn (a) {
+      console.log(a)
+    }
+    console.log(fn)
+    console.log(fn(12))
+
+    // // 2
+    function fn (a, b, c) {
+      console.log(a)
+      console.log(c)
+      return
+    }
+    console.log(fn(1, 2))
+
+    // 3
+    // function fn (a, b, c) {
+    //   console.log(a)
+    //   return 45
+    //   console.log(b)
+    //   console.log(c)
+    // }
+    // fn(12, 23, 34)
+
+    // 4
+    function fn (a, b, c) {
+      console.log(a)
+      return b
+    }
+    console.log(fn(12))
+
+    // 5
+    function fn (b, c) {
+      console.log(b)
+      console.log(c)
+      return 56
+    }
+    console.log(12)
+    console.log(fn(23, 34))
+    console.log(45)
+  </script>
+</body>
+
+</html>

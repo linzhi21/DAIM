@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 第一步：创建容器必须有宽高 -->
+  <div id="main" style="width: 600px;height:400px;"></div>
+  <script src="./node_modules/echarts/dist/echarts.js"></script>
+  <script src="./node_modules/echarts/theme/macarons2.js"></script>
+
+  <!-- 引入echarts，初始化echarts实例 -->
+  <script>
+    const chart = echarts.init(document.getElementById('main'),'macarons2')
+    // 通过chart.setOption设置选项（配置项）
+    let option = {
+      // title: {
+      //   text: 'ECharts 入门示例'
+      // },
+      tooltip: {}, //提示
+      legend: { //图例
+        data: ['销量']
+      },
+      xAxis: {
+        data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+      },
+      yAxis: {},
+      // 系列，对应的就是图
+      series: [
+        {
+          name: '销量', //这个值要和图例的data值对应
+          type: 'bar', //图的类型  line线状图  bar代表柱状图  pie代表饼状图
+          data: [5, 20, 36, 10, 10, 20]
+        }
+      ]
+    };
+    chart.setOption(option)
+
+
+    // 如果数据是异步数据，通过请求回来的，或者是模拟定时器设置的
+    // 那么你需要设置两次option
+    // 第一次是初始化的时候需要设置一次，虽然图标出来是白板，但是 坐标轴是在的
+    // 如果数据回来了，我们需要再次设置一次，那么图表就出来了
+  </script>
+</body>
+
+</html>

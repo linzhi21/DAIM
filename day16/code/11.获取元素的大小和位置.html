@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #one{
+      width: 500px;
+      height: 500px;
+      background-color: red;
+      /* border: 60px solid yellow; */
+      /* position: relative; */
+    }
+    #two{
+      width: 300px;
+      height: 300px;
+      background-color: green;
+      padding: 20px;
+      border: 10px solid pink;
+      transform: translateX(100px);
+      /* margin-left: 50px; */
+      /* overflow: scroll;
+      position: absolute;
+      left: 80px; */
+    }
+    #three{
+      width: 500px;
+      height: 500px;
+      padding: 30px;
+      border: 40px solid purple;
+      margin: 50px;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="one">
+    <div id="two">
+      <div id="three"></div>
+    </div>
+  </div>
+  <button>获取滚动距离</button>
+  <script>
+    window.onload = function(){
+      var two = document.querySelector('#two')
+      var btn = document.querySelector('button')
+      // 一共是有12个 讲六个 剩下六个是一样的
+
+      // 拿的是元素的大小 6个
+      // console.log(two.clientWidth) //******盒子的宽+盒子的padding
+      // console.log(two.offsetWidth) //******盒子的宽+盒子的padding+盒子的边框
+      // console.log(two.scrollWidth)
+      // 1. 内容（three）小于盒子（two）  拿的是盒子（two）的clientWidth
+      // 2. 内容（three）大于盒子（two）  拿的是内容的offsetWidth+内容一侧的外边距+盒子一侧的内边距
+
+      // 拿的是元素的位置 6个
+      // console.log(two.clientLeft)  //拿的是盒子的左边框
+      console.log(two.offsetLeft)  //*********拿的是盒子的偏移量(left) 不是一样要定位才行 参照点（视口 开启相对定位的父元素都可以）
+       
+      btn.onclick=function(){ 
+        // 只有scrollLeft 可读可写
+        // console.log(two.scrollLeft)  // ********内容往左侧滚动的距离 而不是滚动条滚动的距离！！！！
+        // two.scrollLeft = 70  //scrollLeft 设置的时候注意不要加px
+      }
+    } 
+  </script>
+</body>
+</html>

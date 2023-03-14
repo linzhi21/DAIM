@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 隐式转换发生在：数据之间运算 比较 和判等中
+    // console.log(1+1) //2
+    // console.log(1+'哈哈哈') //'1哈哈哈'
+    // console.log(1+false) //1
+    // console.log(1+undefined) //NaN
+    // console.log('123'+'789') //'123789'
+
+    // console.log(10>'11') //false
+    // console.log('123'>'12') //ascll码表的位置
+    // console.log('1234'>'13') //ascll码表的位置
+
+
+    // 规则 数据之间的运算和比较
+    // 1.先来看是不是+法 如果是加法 看两边有没有字符串(只要有一侧有就算) 有就是拼接字符串
+    // 2.不是加法 看是不是比较大小(> < >=  <=)
+    // 3.是比较大小 看两边是不是同时是字符串(两侧都是字符串) 如果是 比较的是ascll码表的位置(0 48 A 65 a 97)
+    // 其余情况两边全部转数字
+
+
+    // 规则 数据之间的判等
+    // 1.看两边是不是同一种数据类型 如果是 那么比较值一样不一样
+    // 2.如果不是同种数据类型 两边同时转数字
+    // console.log(10 == 11) //false
+    // console.log(10 == '10') //true
+    // console.log(1 == true) //true
+    // 判等的特殊情况 null
+    console.log(null == 0) //false
+    // console.log(null == false) //false
+    // console.log(null == '') //false
+    // console.log(null == null) // true
+    // console.log(null == undefined) //true
+
+    // NaN 六亲不认
+    // NaN与任何人运算 结果都是NaN 但是除了拼接字符串
+    // NaN和任何人比较大小 结果都是false
+    // NaN和任何人判等 结果都是不等
+    var a = 1
+    a = true
+    a = undefined
+    a = 'hhh'
+    console.log(a+NaN)//hhhNaN
+    console.log(NaN+NaN)//NaN
+
+    console.log(NaN>1)// false
+    console.log(NaN<1)// false
+
+    console.log(NaN == 1)// false
+    console.log(NaN == NaN)// false
+
+  </script>
+</body>
+</html>

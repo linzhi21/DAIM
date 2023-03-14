@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 原型
+    // 显示原型 prototype
+    // 公共的地方 妈妈的显示原型 Dog.prototype
+    // 只要是函数就有这个属性
+    // 隐式原型 __proto__ 浏览器打印出来是[[prototype]] 但是你们要知道本质是__proto__
+    // 只要是对象就有
+    function Dog(name){
+      this.name = name
+    }
+    Dog.prototype.run=function(){
+      console.log('run')
+    }
+    var d1 = new Dog('小黑')
+    var d2 = new Dog('小花')
+    console.log(Dog.prototype)
+    
+    // console.dir(Dog)
+    // d1.run()
+    // d2.run()
+    // console.log(d1)
+    // console.log(d2)
+    // function fn(){
+
+    // }
+    // console.dir(fn)
+    // var obj ={
+    //   a:1
+    // }
+    // console.log(obj)
+  </script>
+</body>
+</html>

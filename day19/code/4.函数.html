@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // for (var i = 0; i < 3; i++) {
+
+    //   setTimeout(function () {
+    //     console.log(i);
+    //   }, 0)
+
+    // }
+
+    // 递归函数
+    var arr = [1, 2, 3]
+    var num = 0
+    function fn (arr) {
+      if (arr.length == 0) {
+        return num
+      }
+      num += arr[0]
+      arr.shift()
+      return fn(arr)
+    }
+    console.log(fn(arr))
+
+  </script>
+</body>
+
+</html>

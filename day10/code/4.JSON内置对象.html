@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // JSON  内置对象(js自带的 你直接用就可以)
+    // JSON当中的两个方法 stringify parse
+    // stringify  把一个数据转成json
+    // parse  把一个json串当中数据解出来
+
+    // json 数据格式 字符串 json串
+    // 这个数据格式是用来让咱们前后端传递或接收数据的统一格式
+    var name = '张三'
+    var password = 123456
+    // obj这个对象模拟收集到的用户信息
+    var obj ={
+      name:name,
+      password:password
+    }
+    // 把obj这个对象转成json数据类型
+    var result = JSON.stringify(obj)
+    console.log(result)
+
+    // 后端给咱们前端传输数据的时候也是传json类型 咱们需要解出来
+    var obj1 = JSON.parse(result)
+    console.log(obj1)
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 影响原数组的方法
+    //var arr = [1,3,5,7,11]
+
+    // 3. unshift
+    // 功能：在数组的头部添加元素(可以是多个)
+    // 参数：你要新增的元素 可以多个
+    // 返回值:返回你增加完元素之后最新的数组长度
+    // console.log(arr.unshift(2,4))
+    // console.log(arr)
+   
+    // 1.push ******
+    // 功能：在数组的末尾增加一个元素
+    // 参数；你要新增的元素 (可以是多个)
+    // 返回值；增加完元素后数组的长度
+    // arr.push(9)
+    // arr.push(11)
+    // console.log(arr.push(9))
+    // console.log(arr)
+    
+    var arr = [9,3,5,7,11]
+    // 4.shift
+    // 功能；在数组的头部删除一个元素
+    // 参数；无
+    // 返回值:返回删除的哪一个元素
+    // console.log(arr.shift())
+    // console.log(arr)
+   
+    // 2.pop *****
+    // 功能：在数组的末尾删除一个元素
+    // 参数：无
+    // 返回值：返回删除的那一个元素
+    // console.log(arr.pop())
+    // console.log(arr)
+    
+    // 5.splice **********
+    // 功能：任意位置增删改
+
+    // 删
+    // 参数 第一个代表起始下标  第二个代表你要删除的长度
+    // 返回值：返回的是删除元素组成的数组
+    // console.log(arr.splice(2,2))
+    // console.log(arr)
+    
+        // 增
+    // 参数；第一个是起始下标 第二个删除的长度 后续就是你要增加的元素
+    // 返回值：空数组 因为删除0个 返回的是删除元素组成的数组
+    // console.log(arr.splice(1,0,99,98,97))
+    // console.log(arr)
+
+    // 改
+    // 参数；第一个起始下标 第二个删除的长度  第三个要新增的数据
+    // 返回值:返回删除的元素组成的数组
+    // console.log(arr.splice(1,2,88,87))
+    // console.log(arr)
+
+    var arr = [9,3,5,7,11]
+    // 6.sort***********
+    // 功能:对数组排序
+    // 参数；一个函数 在这个函数的形参可以接收两个 a b 
+    // 返回值：排好序的数组 return a-b升序  b-a降序
+    var result = arr.sort(function(a,b){
+      // return a-b //从小到大去排序
+      return b-a //从大到小去排序
+    })
+    console.log(result)
+    console.log(arr)
+     
+    // 7.reverse
+    // 功能：反转数组
+    // 参数：无
+    // 返回值：反转之后的数组
+    // console.log(arr.reverse())
+    // console.log(arr)
+   
+  </script>
+</body>
+</html>

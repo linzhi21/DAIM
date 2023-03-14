@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 数组
+    // 是什么：是由同种数据类型或不同数据类型数据组成的有序集合
+    // 为什么：让咱们一次性的存储多个数据
+    // 数组的定义方式 2种
+
+    // 虽然说咱们之后都用第一种方式定义数组 但是你要知道 第一种方式定义数组 本质还是在new Array()
+
+    // 1.字面量定义数组(常用)
+    // var arr = [] //代表声明了一个数组(空)  只要出现了[]代表定义了一个数组
+    var arr1 = [1] //代表定义了一个数组  数组当中有一个数据(元素)
+    // var arr2 =['数组'] //代表定义了一个数组  数组当中有一个数据(元素)
+    // var arr3 = ['数组','函数','对象']  //代表定义了一个数组  数组当中有三个数据(元素) 同种类型
+    // var arr4 = [1,'引用数据类型',true] //代表定义了一个数组  数组当中有三个数据(元素) 都是不同种类型
+    // var arr5 = [1,1,1,false,false] //代表定义了一个数组  数组当中有五个数据(元素) 重复无所谓
+    // console.log(arr)
+    console.log(arr1)
+    // console.log(arr2)
+    // console.log(arr3)
+    // console.log(arr4)
+    // console.log(arr5)
+
+
+    // 2.构造函数定义数组(基本不用)
+    var arr = new Array() //代表定义了一个数组(空)
+    var arr1 = new Array('数组')  //代表定义了一个数组 数组当中有一个数据(元素)
+    // 有坑！！！
+    var arr2 = new Array(5) //代表定义了一个数组 数组的长度为5  那么数组当中值是undefined !!!!!!!!!!!!
+    var arr3 = new Array('数组','函数','对象') //代表定义了一个数组  数组当中有三个数据(元素) 同种类型
+    var arr4 = new Array(1,'引用数据类型',true) //代表定义了一个数组  数组当中有三个数据(元素) 都是不同种类型
+    // console.log(arr)
+    // console.log(arr1)
+    console.log(arr2)
+    // console.log(arr3)
+    // console.log(arr4)
+  </script>
+</body>
+</html>

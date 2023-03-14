@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 输出1 - 100之间所有的素数（质数）（只能被1和自身整除的数, 但是1不是质数）
+
+    // 1.标志位思想
+    // var flag = true
+    // // 拿被除数
+    // for(var i=1;i<=100;i++){
+    //   // 内层循环拿除数
+    //   for(var j=2;j<i;j++){
+    //     if(i%j==0){
+    //       // 说明一定不是质数
+    //       flag = false
+    //       break
+    //     }
+    //   }
+    //   // 不是质数的来到了这里  遇到break跳到这来的
+    //   // 是质数 老老实实执行完内层for循环 没有遇到break 也来到了这
+    //   // 数字1还有数字2来到了这 内层for循环条件不满足
+    //   if(flag&&i!=1){
+    //     console.log(i)
+    //   }
+    //   // 重置标志位
+    //   flag = true
+    // }
+
+    // 2.计数器
+    var num = 0 //在纪律整除了多少次 是两次的话 说明这个数是质数
+    for(var i=1;i<=100;i++){
+      // 取得是1-这个数字之间所得的
+      for(var j=1;j<=i;j++){
+        if(i%j==0){
+          num++
+        }
+      }
+      if(num == 2){
+        console.log(i)
+      }
+      // 重置num
+      num = 0
+    }
+
+
+
+
+
+
+
+
+
+
+   
+  </script>
+</body>
+
+</html>

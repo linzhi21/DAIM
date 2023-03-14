@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 随机验证码
+    // str就是码源
+    var str = '4r65r7e8w9r7e98wre2w412316545r6w6^^%^&*(&(*%##$@$^&&*(^'
+    console.log(str.length) //字符串可以当成对象来玩
+    console.log(str[3])
+    
+    // 做一个6位数的验证码
+    // var code = ''
+    // // 这个循环再控制是几位数的验证码
+    // for(var i =0;i<6;i++){
+    //   // 相当于是在字符串当中随机的去取一个下标出来
+    //   var index = Math.floor(Math.random()*str.length)
+    //   // 取到这个随机下标对应的字符
+    //   var item = str[index]
+    //   // 每次取出来加到code当中
+    //   code +=item
+    // }
+    // console.log(code)
+    
+    // 封装一个函数来返回N位的验证码
+
+    function randomCode(n){
+      var str='4r65r7e8w9r7e98wre2w412316545r6w6^^%^&*(&(*%##$@$^&&*(^'
+      var code=''
+      for(var i=0; i<n; i++){
+        var index= Math.floor(Math.random()*str.length)
+        var item=str[index]
+        code+=item
+      }
+      return code
+    }
+     var result=randomCode(4)
+    console.log(result)
+     console.log(randomCode(7))
+  </script>
+</body>
+</html>

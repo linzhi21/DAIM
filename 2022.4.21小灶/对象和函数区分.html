@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 对象 某个属性可以是函数(方法)
+    // var obj ={
+    //   name:'张三',
+    //   eat:function(){
+    //     console.log('可以吃饭')
+    //   }
+    // }
+
+
+
+    // 函数有两个角色 函数是函数 函数也是对象
+
+    // 看怎么用这个东西的  加括号调用 那么就是函数的角色   如果进行.语法或者[]语法操作就是当作对象来用的
+    // new Array()
+    // Array.isArray()
+
+    // function fn(){
+    //   console.log('fn')
+    // }
+    // fn()
+    // fn.a = 'a'
+
+
+    // 原型上的方法和对象上的方法
+
+    // 原型上的方法只有实例可以用 对象上的方法只有对象自己能用
+
+    // function Dog(name){
+    //   this.name= name
+    // }
+    // Dog.prototype.run=function(){
+    //   console.log('run')
+    // }
+    // console.dir(Dog)
+    // var d1 = new Dog('小黑')
+    // Dog.run()
+
+    function fn(name){
+      this.name= name
+    }
+    var f1 = new fn('name')
+    fn.a = 1 //给fn这个函数对象 自己加了a属性 那么f1这个实例化对象是用不了的  为啥？ 因为实例化对象只能找到妈妈的显示原型中去
+    console.log(f1.a)
+
+    // var obj={
+    //   a:{
+    //     b:function(){
+    //       console.log('b')
+    //     }
+    //   }
+    // }
+    // obj.b()
+  </script>
+</body>
+</html>

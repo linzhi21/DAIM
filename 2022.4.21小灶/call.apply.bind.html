@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // call apply bind 都是修改this的
+    // call apply 会自动执行前面的函数  
+    // call bind传参方式一样
+
+    // bind会返回一个新的函数 不会自动执行前面的 需要手动调用
+    // apply 传参方式不同 需要传成[]的形式
+    var obj ={
+      name:'张三',
+      eat:function(a,b){
+        console.log(a,b)
+        console.log(this)
+      }
+    }
+    var obj1 ={
+      name:'李四'
+    }
+    // obj.eat()
+    // obj.eat.call(obj1,1,2)
+    // obj.eat.apply([1,2,3],[1,2])
+    var newFn=obj.eat.bind([3,6,8])
+    newFn(7,8)
+  </script>
+</body>
+</html>

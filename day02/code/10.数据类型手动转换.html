@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 手动转换
+    // parseInt() 只要整数部分  parseFloat() 不光要整数部分还要小数点部分
+    // 从字符串当中取提取数字  必须是数字开头
+    // var str = ' aa123.   456.789hhhh   ' //  result=NaN , result1=NaN  ,number=nan
+    // var str = ' 123.   456.789hhhh   ' //result=123 number=nan
+    // var str = ' 123.456.789hhhh   ' // result=123 , result1=123, number=nan
+    // var str = ' 123.456hhhh   ' // result=123 , result1=123.456, number=nan
+    var str = '123.456hhhh' // result=123 , result1=123.456, number=nan
+    var result = parseInt(str)
+    var result1 = parseFloat(str)
+    console.log(result)
+    console.log(result1)
+
+    console.log(Number(str))
+
+    // var num = 678
+    // console.log(678/10%10)  
+    // // 控制台打印结果为  7.799999999999997
+    // // js在计算一些带有小数点的数值时候 是不准确的  浮点数精确丢失
+    // console.log(parseInt(678/10%10))
+    // console.log(0.1+0.2)  //false
+  </script>
+</body>
+</html>

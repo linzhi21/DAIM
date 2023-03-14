@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Dog(name,age){
+      this.name=name
+      this.age=age
+      // this.run =function(){
+      //   console.log('跑的很快')
+      // }
+    }
+    var d1 = new Dog('小黑',2)
+    var d2 = new Dog('小花',3)
+    Dog.prototype.run=function(){
+      console.log('跑的很快,我是显示原型对象的')
+    }
+    d1.run()
+    d2.run()
+    console.log(d1)
+
+    // console.dir(Dog.prototype)
+    // 此刻生下来两条狗 一个是d1 一个是d2 每个对象身上你都增加了一个run方法
+    // 假设我此刻有100条狗 100个实例会开辟空间之外 还会再开辟100个空间来放100个run方法(会造成空间浪费 浪费内存)
+
+    // 想办法让100个狗去用一个公用的方法 找个地方去放这个run方法 让他们每个狗都去用这一个
+
+
+    // 原型对象 
+    // 作用：节省内存 资源共享
+    // 显示原型对象  prototype
+    // 在哪里；只要是函数 那么函数对象身上就会有prototype属性
+    // 隐式原型对象 __proto__
+    // 在哪里：只要是对象 对象身上就会有__proto__  [[Prototype]]谷歌浏览器显示的是这样 本质__proto__
+    var obj ={a:1}
+    console.log(obj)
+  </script>
+</body>
+</html>

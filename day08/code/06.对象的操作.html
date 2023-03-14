@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 对象操作 （增删改查）
+    // 两种： .语法  []语法
+    // var c1 = {
+    //   name:'拯救者',
+    //   age:3,
+    //   color:'黑色',
+    //   writeCode:function(){
+    //     console.log('写代码')
+    //   }
+    // }
+    // console.log(c1)
+    // console.log(c1['age'])
+  
+    // // []语法(通用的)
+    // // 查
+    // console.log(c1['color'])//访问对象的属性
+    // console.log(c1['type']) //如果访问对象没有的属性 出来的值是undefined
+    // // console.log(color) //相当于在访问color变量身上的值
+    // // 增
+    // c1['price'] = 7000
+    // console.log(c1) 
+    // // 如果对对象进行增加删除或者修改 在这些操作之前点开发现改了这个对象 是正常的 是浏览器帮咱们做的
+    // // 删
+    // delete c1['age']
+    // console.log(c1)
+    // // 改
+    // c1['name'] = '联想'
+    // console.log(c1)
+
+    // .语法(常用的)
+    // var c1 = {
+    //   name:'拯救者',
+    //   age:3,
+    //   color:'黑色',
+    //   writeCode:function(){
+    //     console.log('写代码')
+    //   }
+    // }
+
+    // 查
+    // console.log(c1.writeCode())
+    // console.log(c1.writeCode)
+    // // 增
+    // c1.price = 7000
+    // console.log(c1)
+    // // 改
+    // c1.age = 4
+    // console.log(c1)
+    // // 有则修改 无则添加
+    // // 删
+    // delete c1.color
+    // console.log(c1)
+
+    // .语法特殊情况
+    // 1. 如果你要用到的属性名不符合标识符规则 .语法不行
+    // c1.con-type = 2
+    // 2. 他不能操作某个变量做为他的属性名
+
+    // []语法总结
+    // 1.[]当中可以放置变量 取到变量的值做为对象的属性名
+    // 2.[]语法里面可以写不符合标识符规则的名字
+
+    // []语法 特殊用法
+    var c1 = {
+      name:'拯救者',
+      age:3,
+      color:'黑色',
+      writeCode:function(){
+        console.log('写代码')
+      }
+    }
+    console.log(c1['name'])
+    var type='lll'
+    c1[type]=2
+    console.log(c1.lll)
+    var flag=true
+    c1[flag]=9
+    c1['flag']=9
+    console.log(c1)
+    // var type = 'hhh'
+    // type = true
+    // c1[type] = 2  //给对象身上增加一个属性 这个属性名是这个变量的值 如果属性名不是字符串 会强转为字符串
+    // console.log(c1)
+
+    // var flag = 3
+    // // c1['flag'] = 9
+    // c1[flag] = 9
+    // console.log(c1)
+    // c1['con-type'] = 9
+    // console.log(c1)
+    // c1.flag = 9
+    // console.log(c1)
+  </script>
+</body>
+</html>

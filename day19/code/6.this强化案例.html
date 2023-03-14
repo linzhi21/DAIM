@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // this出现场景
+    // 1.普通函数调用 this指向window
+    // 2.对象的方法调用 this指向这个对象
+    // 3.构造函数当中  this指向实例化对象
+    // 4.事件回调当中 this指向咱们的事件源
+    // 5.使用call apply bind 任意修改this指向
+
+    // 1.
+    // //  Array.prototype.forEach = function () {} 在修改原先js提供的forEach方法
+    // Array.prototype.forEach = function () {
+    //   console.log(this)
+    // };
+    // // [1, 2, 3].forEach()  //[1,2,3]
+
+    // var obj = {
+    //   arr: [4, 5, 6]
+    // }
+    // obj.arr.forEach()
+
+    // 2.
+    // var obj = {
+    //   name: '张三',
+    //   fn: function () {
+    //     console.log(this)
+    //   }
+    // }
+    // var newFn = obj.fn.bind({ a: 1 }).bind({ b: 2 }).bind({ c: 3 })
+    // // bind  call apply  三者连用只能修改一次this  之后修改的this不作数
+    // newFn()
+
+    // 3.
+    // var obj = {
+    //   name: '张三',
+    //   obj1: {
+    //     name1: '李四',
+    //     fn: function () {
+    //       console.log(this)
+    //     }
+    //   }
+    // }
+    // obj.obj1.fn()
+
+    // 4.
+    // var name = "The Window";
+    // var object = {
+    //   name: "My Object",
+    //   getNameFunc: function () {
+    //     return function () {
+    //       return this.name;
+    //     };
+    //   }
+    // };
+    // console.log(object.getNameFunc()());
+
+    // 5.
+    // var name2 = "The Window";
+    // var object2 = {
+    //   name2: "My Object",
+    //   getNameFunc: function () {
+    //     var that = this;
+    //     return function () {
+    //       return that.name2;
+    //     };
+    //   }
+    // };
+    // console.log(object2.getNameFunc()());
+
+    // 6.
+    var p1 = {
+      name: '小明',
+      age: '12',
+      action: function (where, doing) {
+        console.log(this.age + '岁的' + this.name + '在' + where + doing);
+      }
+    }
+
+    var p2 = {
+      name: '小红',
+      age: '15'
+    }
+
+    console.log(p1.action.call(p2, '操场上', '运动'))
+  </script>
+</body>
+
+</html>

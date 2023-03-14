@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    body,html{
+      overflow: hidden;
+      height: 100%;
+    }
+    #wrap{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    #scrollbar{
+      width: 40px;
+      height: 100%;
+      background-color: pink;
+      position: absolute;
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+      top: 0;
+      right: 0;
+    }
+    #scrollin{
+      width: 36px;
+      height: 80px;
+      background-color: cyan;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    #content{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="scrollbar">
+      <div id="scrollin"></div>
+    </div>
+    <div id="content"></div>
+  </div>
+  <script>
+     window.onload = function(){ 
+     
+      var box = document.querySelector('#scrollin')
+      var content = document.querySelector('#content')
+     
+      for(var i =0;i<400;i++){
+        content.innerHTML+=i+'</br>'
+      }
+      var scale  = document.documentElement.clientHeight /content.offsetHeight
+      var boxHeight = document.documentElement.clientHeight * scale
+      box.style.height = boxHeight +'px'
+
+      document.onmousewheel=function(e){
+        e = e ||window.event
+        if(e.wheelDelta>0){ 
+         
+          var scrollinDis = box.offsetTop-10
+          if(scrollinDis<0){
+            scrollinDis = 0
+          }
+          // box.style.top = scrollinDis+'px'
+        }else if(e.wheelDelta<0){ 
+          
+          var scrollinDis = box.offsetTop+10          
+          if(scrollinDis>document.documentElement.clientHeight-box.offsetHeight){
+            scrollinDis = document.documentElement.clientHeight-box.offsetHeight
+          }
+          
+        }
+        box.style.top = scrollinDis+'px'
+        content.style.top = -scrollinDis/scale +'px'  
+      }
+
+      box.onmousedown=function(e){
+        e = e || window.event
+       
+        var eleY = box.offsetTop        
+        var startY = e.clientY
+
+        document.onmousemove=function(e){
+          e = e ||window.event          
+          var endY = e.clientY        
+          var disY = endY - startY        
+          var lastY = eleY+disY         
+          if(lastY>document.documentElement.clientHeight-box.offsetHeight){ 
+            lastY=document.documentElement.clientHeight-box.offsetHeight
+          }else if(lastY<0){ 
+            lastY = 0
+          }
+
+          content.style.top = -lastY / scale +'px'          
+          box.style.top = lastY+'px'
+        }
+
+        document.onmouseup=function(){
+          document.onmousemove = document.onmouseup= null
+        }
+        e.preventDefault()      
+      }
+
+    }
+  </script>
+</body>
+</html>

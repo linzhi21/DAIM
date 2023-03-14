@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.变量在表达式得前面，先赋值(先拿到变量的值赋值给整体得表达式)，后自增1或者自减1(变量偷摸得自增1或者自减1)
+    // 2.变量在表达式得后面，先自增1或者自减1(变量得自增1或者自减1)，后赋值(会拿到最新得变量得值赋值给表达式整体)
+    var a = 7;
+    var b = 9;
+    var c = a + b++; // b++ ==> 9   b ==> 10  c ==> 16
+    c = ++a + b++; // ++a ==> 8  a ==> 8   b++ ==> 10   b ==> 11
+    c = b + a++; //a++ 8 a 9  c 19
+    c = ++a + b++; //++a 10  a 10  b++ 11  b 12  c 21
+    c = --a + b; //--a 9  a 9 c 21
+    c = a + b--; //b-- 12 b 11 c  21
+    // 问:a,b,c的值;
+    // var weather=true
+    // weather=1
+    // if(weather){
+    //   console.log('去看电影')
+    // }
+    // else{console.log('流着泪开心的去写代码')}
+
+    // var num=parseFloat(prompt('请输入一个数'))
+    // if(num>0){
+    //   num-=1
+    //   // --num
+    //   // num--
+    //   // num=num-1
+    //   console.log(num)
+    // }
+    //   else{
+    //     num+=1
+    //     // num++
+    //     // ++num
+    //     console.log(num)
+    //   }
+    num > 0 ? console.log(num -= 1) : console.log(num += 1)
+
+    var num = parseFloat(prompt('请输入一个数字'))
+    var weight
+    if (70 <= weight && weight >= 90) {
+      console.log('骨感美')
+    } else if (90 < weight && weight >= 120) {
+      console.log('性感美')
+    } else if (120 < weight && weight >= 150) {
+      console.log('贵妃美')
+    } else if (150 < weight && weight >= 200) {
+      console.log('丰满美')
+    } else if (200 < weight && weight >= 300) {
+      console.log('灵魂美')
+    } else {
+      console.log('请输入70-300的数字')
+    }
+
+    if (1) {
+
+    } else {
+
+    }
+
+    var n = 100;
+    console.log(n++ && n--); //n=101, n--=101,n=100 
+    console.log(n); //100
+    console.log(--n || n++); //--n=99,n=99
+    console.log(n); //n=99
+  
+  </script>
+</body>
+
+</html>

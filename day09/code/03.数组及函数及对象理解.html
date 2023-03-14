@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 数组是数组 数组是对象（特殊 有序）
+    // var arr = [1,3,5,7]
+    // console.log(arr)
+
+    // console.log(arr.length)
+    // console.log(arr[0])
+    // for(var key in arr){ //length默认遍历不到
+    //   console.log(key)
+    // }
+  
+    // 函数是函数 函数是对象(特殊 可以去执行)
+    function fn(){
+      console.log('fn')
+    }
+    fn() //把fn当成函数来用 因为只有函数能加()调用
+    console.log(fn) //打印的函数表面 肉体
+    console.dir(fn) //打印函数的内在 灵魂   可以把一个函数当成对象来打印
+    fn.a = 123 //把函数当成对象来用 只有对象才能.语法或者[]语法
+    console.dir(fn)
+  </script>
+</body>
+</html>

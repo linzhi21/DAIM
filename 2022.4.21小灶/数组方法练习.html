@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+		// 找出字符串'abcdcdff'中出现的所有字符和每个字符出现次数
+    // var str = `abcdcdff`
+    // var obj={}
+    // for(var i =0;i<str.length;i++){
+    //   var oneStr = str[i]
+    //   if(obj[oneStr]){
+    //     obj[oneStr]= obj[oneStr]+1
+    //   }else{
+    //     obj[oneStr]=1
+    //   }
+    // }
+
+
+
+    // 空数组中随机添加1 - 100中的值，直到1 - 100的值全部放入数组中且值不能重复
+
+      // var arr = []
+      
+      // while(arr.length<100){
+      //   var randomNum = Math.floor(Math.random()*100+1)
+      //   if(arr.indexOf(randomNum)==-1){
+      //     arr.push(randomNum)
+      //   }
+      // }
+
+
+
+    
+
+    // 形成嵌套结构，一个元素的pid如果和另一个元素的id相等，就把pid这个元素放入id元素的children属性中
+    var arr = [
+      { id: 1, pid: 0, title: '首页'},
+      { id: 2, pid: 1, title: '订单列表' },
+      { id: 3, pid: 1, title: '刊登页面' },
+      { id: 4, pid: 3, title: '刊登列表' },
+      { id: 5, pid: 3, title: '刊登管理' },
+      { id: 6, pid: 0, title: '登录' }
+    ]
+
+    for(var i =0;i<arr.length;i++){
+      arr[i].children=[]
+      for(var j=0;j<arr.length;j++){
+        if(arr[i].id==arr[j].pid){
+          arr[i].children.push(arr[j])
+        }
+      }
+    }
+    var newArr= arr.filter(function(item,index){
+      return item.pid==0
+    })
+    console.log(newArr)
+    
+
+    
+  </script>
+</body>
+</html>

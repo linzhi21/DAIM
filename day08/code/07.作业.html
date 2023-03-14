@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //1
+    // var a = 'test'
+    // var test = 'test'
+    // var obj = {
+    //   test: '测试内容1'
+    // }
+    // console.log(obj[test], obj.test, obj.a)
+
+
+    // 2
+    var bird = {
+      size: "small"
+    };
+    var mouse = {
+      name: "Mickey",
+      small: true
+    };
+    // console.log(mouse.bird.size)
+    console.log(mouse[bird.size])
+    console.log(mouse[bird["size"]])
+
+
+    // // 3
+    var a = { content: "世界!" };
+    var b;
+    b = a;
+    b.content = "你好";
+    console.log(a.content, b.content);//对象改地址？
+
+
+    // // 4
+    var a = { a: 1, b: 2 };
+    var b = a;
+    b.a = 3;
+    b.b = 4;
+    console.log(a.a, a.b, b.a, b.b);
+  </script>
+</body>
+
+</html>

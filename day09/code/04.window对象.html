@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // window
+    // window对象是js当中所谓的顶级对象 浏览器打开的一刹那 所有的一切都会放在window对象身上
+    // 叫浏览器窗口对象
+    // console.log(window)
+
+    // 全局当中所有的变量或者函数或做为window的属性或者方法
+    var a = 111
+    function fn1(){
+      console.log('fn')
+      var b = 222  //只有全局的才会放在window身上 b没有放进去 因为b是局部的
+    }
+    console.log(window)
+    console.log(a)
+    console.log(window.a)
+    console.log(window.document)
+    console.log(document)
+    
+    // window身上的属性或者方法 可以直接当作变量来用
+  </script>
+</body>
+</html>

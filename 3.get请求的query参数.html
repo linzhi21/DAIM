@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // http  八大请求
+        // 常用的四种  get put post delete
+        // 请求的参数
+            // query 参数  (查询字符串)
+            // params参数  
+            // 请求体参数  (JSON编码 urlendcoded 编码)   get请求没有请求体
+
+        //query 参数传递参数  配置项是 params !!! 
+
+        // 配置拦截器
+
+        async function tes(){
+            // let res = await axios.get('/person?id=123456')  简单写法
+            let res = await axios.get('/person',{
+                params:{
+                    id:'1324564646',
+                    id:'13351311313'
+
+
+            }})
+        }
+
+
+        // params  参数 直接拼 什么都不用写  没有配置项
+        async function test(){
+            // 接口 /fiflter/age
+            // let res = await axios.get('/fiflter/21')
+
+            // 完整写法
+            let res =await axios.get({
+                url:'/fiflter/21',
+                method:'GET'   //默认就是 GET请求
+                
+            })
+
+        }
+    </script>
+</body>
+</html>

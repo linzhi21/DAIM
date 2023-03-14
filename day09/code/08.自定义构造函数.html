@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 自定义构造函数
+    // 自己去定义一个类别 让之后生下来的孩子(对象)一定属于某个类
+
+    // 构造函数 就是一个函数
+    // 声明函数时 首字母咱们通常会大写 规范(建议遵循)
+    // 调用函数时 前面必须有new这个关键字 规定
+    function Dog(uname,age,height){
+      this.name=uname
+      this.age=age
+      this.height=height
+      this.run=function(){
+        console.log('跑的很快')
+      }
+    }
+    var d1 = new Dog('小黑',3,50)
+    
+    // Dog(1,2,3)
+    console.log(d1.age)
+  </script>
+</body>
+</html>

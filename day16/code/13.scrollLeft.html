@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #wrap{
+      width: 300px;
+      height: 300px;
+      background-color: red;
+      overflow: scroll;
+    }
+    #box{
+      width: 500px;
+      height: 500px;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="box"></div>
+  </div>
+  <button>获取scrollLeft</button>
+  <script>
+    window.onload=function(){
+      // offsetLeft 只记定位后的偏移量
+      var wrap = document.querySelector('#wrap')
+      var btn = document.querySelector('button')
+      
+      btn.onclick=function(){
+        console.log(wrap.scrollLeft)
+      }
+    }
+  </script>
+</body>
+</html>

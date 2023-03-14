@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.
+		// 往数组里面添加1~10的数字，并且要求数组内已经有的数字不能添加		
+    // var arr = [3, 10, 6];
+    // for(var i =1;i<=10;i++){
+    //   // 重复还是不重复 不重复再放
+    //   if(arr.indexOf(i)==-1){
+    //     arr.push(i)
+    //   }
+    // }
+    // console.log(arr)
+
+    // 2.
+    // 判断字符串’12345678945621214546’中4出现了几次
+      // var str = '1234567844945621214546'
+      // var arr = str.split('4')
+      // console.log(arr.length-1)
+      // 切割点个数就等于数组长度-1
+      
+
+
+    // 3.
+		// 找出字符串'abcdcdff'中出现的所有字符和每个字符出现次数
+      // var str = 'abcdcdff'
+      // var obj = {}
+      // for(var i =0;i<str.length;i++){
+      //   var oneStr = str[i]
+      //   if(obj[oneStr]){
+      //     obj[oneStr]++
+      //   }else{
+      //     obj[oneStr]=1
+      //   }
+      // }
+      // console.log(obj)
+
+
+
+    // 4.
+    // 空数组中随机添加1 - 100中的值，直到1 - 100的值全部放入数组中且值不能重复
+        // var arr = []
+        
+        // while(arr.length<100){
+        //   var num = Math.floor(Math.random()*100+1)
+        //   // 判断重复还是不重复
+        //   if(arr.indexOf(num) ==-1){
+        //     arr.push(num)
+        //   }
+        // }
+        // var sortArr=arr.sort(function(a,b){
+        //   return a-b
+        // })
+        // console.log(sortArr)
+
+
+
+
+    // 5.
+    // // 形成嵌套结构，一个元素的pid如果和另一个元素的id相等，就把		pid这个元素放入id元素的children属性中
+
+    var arr = [
+      { id: 1, pid: 0, title: '首页'},
+      { id: 2, pid: 1, title: '订单列表' },
+      { id: 3, pid: 1, title: '刊登页面' },
+      { id: 4, pid: 3, title: '刊登列表' },
+      { id: 5, pid: 3, title: '刊登管理' },
+      { id: 6, pid: 0, title: '登录' }
+    ]
+    arr.forEach(function(item,index){
+      item.children=[]
+      
+      arr.forEach(function(item1,index1){
+        if(item.id==item1.pid){
+          item.children.push(item1)
+        }
+      })
+    })
+    var filterArr = arr.filter(function(item,index){
+      return item.pid==0
+    })
+    console.log(filterArr)
+  </script>
+</body>
+
+</html>

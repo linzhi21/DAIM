@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var a;
+    console.log(a) //这个不是报错！！！
+
+    // console.log(b) 
+    // ReferenceError: b is not defined  引用错误 b这个变量没有定义
+
+    // console.log(‘’)
+    // SyntaxError: Invalid or unexpected token  语法错误 出现了非法的或者是不认识符号或者标识符
+    // 会有一个检查你代码语法的过程 如果不通过 一行代码都执行不了
+
+    a()
+    // TypeError: a is not a function  类型错误 a不是一个函数
+    // 错误的把一个变量当作函数来用了
+  </script>
+</body>
+</html>

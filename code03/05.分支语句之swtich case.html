@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // switch case
+
+    // 语法
+    // switch(值){
+    //   case 值:
+    //     代码块
+    //     break; 
+    //   case 值:
+    //     代码块
+    //     break;
+    //   case 值:
+    //     代码块
+    //     break;
+    //   default :
+    //    代码块
+    //    break
+    // }
+
+    // 执行过程
+    // 1. 先拿到switch()中的值
+    // 2. 拿这个值 取一个一个的对比case之后的值 对比的时候是全等对比 ===
+    // 3. 对比成功执行对应case的代码
+    // 4. 所有的case都没对比上  那么执行default的代码
+
+    // break 在switch语句中 break的作用是用来跳出switch语句的
+
+    // switch case 理解: switch case可以理解为if多分支的一个变种
+    //                   为了解决if多分支情况比较多 不利于阅读的情况 出现了switch case
+
+
+    // 1.	输入一个数字，判断是星期几 
+    // var weekDay = parseInt(prompt('请输入一个数'))
+    // switch(weekDay){
+    //   case 1:
+    //     console.log('今天是周一')
+    //     break
+    //   case 2:
+    //     console.log('今天是周二')
+    //     break
+    //   case 3:
+    //     console.log('今天是周三')
+    //     // break
+    //   case 4:
+    //     console.log('今天是周四')
+    //     // break
+    //   case 5:
+    //     console.log('今天是周五')
+    //     // break
+    //   case 6:
+    //     console.log('今天是周六')
+    //     // break
+    //   case 7:
+    //     console.log('今天是周日')
+    //     // break
+    //   default:
+    //     console.log('请输入1-7之间的数字')
+    //     break;
+    // }
+    
+    
+    // 2.	输入分数，判定优良差和不及格(多分支版本  switch版本)
+    //     90 ~ 100    A
+    //     80~90       B
+    //     70~80       C
+    //     60~70       D
+    //     0~ 60       不及格
+    //     其它        提示
+    
+    // if多分支版本
+    // var num = parseFloat(prompt('请输入你的分数'))
+    // if(90<=num&&num<=100){
+    //   console.log('A')
+    // }else if(80<=num&&num<90){
+    //   console.log('B')
+    // }else if(70<=num&&num<80){
+    //   console.log('C')
+    // }else if(60<=num&&num<70){
+    //   console.log('D')
+    // }else if(0<=num&&num<60){
+    //   console.log('不及格')
+    // }else{
+    //   console.log('请输入1-100间的数字')
+    // }
+
+    //switch case 版本
+    var num = parseFloat(prompt('请输入你的分数'))
+    switch(true){
+      case 90<=num&&num<=100:
+        console.log('A')
+        break;
+      case 80<=num&&num<90:
+        console.log('B')
+        break;
+      case 70<=num&&num<80:
+        console.log('C')
+        break;
+      case 60<=num&&num<70:
+        console.log('D')
+        break;
+      case 0<=num&&num<60:
+        console.log('不及格')
+        break;
+      default :
+      console.log('请输入0-100间的数字')
+    }
+
+
+
+
+  </script>
+</body>
+</html>

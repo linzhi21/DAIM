@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 基本数据类型都在玩值 
+    // 引用数据类型都在玩地址！！！
+    // 1.
+    // var a = 10;
+    // var b = a;//相当于把a身上的值（10）给了b一份 两个人都是10了
+    // a = 20;
+    // console.log(b);
+
+    // // 2.
+    // var arr1 = [1, 2, 3];
+    // var arr2 = arr1;//相当于把这个数组的地址给了arr2一份 那么arr1和arr2两个人指向的是同一个地址
+    // arr2[1] = 22;
+    // console.log(arr1);
+
+    // 3.
+    // []一出现 不管[]里面有没有数据 都代表是一个新的数组
+    // var arr1 = [1, 2, 3];
+    // var arr2 = arr1;//两个人都指向同一个数据
+    // arr2 = [1, 22, 3];//把arr2的地址改为了一个新的
+    // console.log(arr1);
+
+    // 4.
+    // var arr1 = [];
+    // var arr2 = [];
+    // var arr3 = arr1;
+    // arr3 = [];
+    // arr3[0] = 12;
+    // console.log(arr1, arr2, arr3);
+
+
+    // var arr = [1,2,3]
+    // var arr1 = [1,2,3]
+    // // 对于引用数据类型判等来说 判的是地址  地址一样就是true  地址不一样就是false
+    // console.log(arr == arr1)
+
+    var arr = [1,2,3]
+    var arr1 = arr
+    console.log(arr == arr1)
+    console.log(arr === arr1)
+
+    (function(){
+      代码块;
+    })();
+    
+    function fu(){
+      console.log('调用函数')
+      fn()
+    }
+  
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 函数
+    // 是什么：是具备特定功能的代码块  工具
+    // 为什么要有函数：解决代码冗余  模块化封装项目
+    // 函数三要素  功能参数返回值
+
+    // 函数组成部分 : 函数声明  函数调用
+    //               两个都有  函数声明里面的代码块 才会执行
+    //               有声明 没调用  相当于函数中写了一堆垃圾代码  不会报错
+    //               没声明 去调用 会报错
+
+    // 函数定义方式
+    // 所有函数定义的本质都是new Function()
+    // 1.函数声明定义（用的多）
+    function fn(){ //fn是函数的名字
+      // 代码块
+      console.log(111)
+    }
+    console.log(fn)
+    fn()
+    var femaleFriend={}
+    // 2.表达式定义函数(也会用 较少)
+    var fn1 = function(){
+      console.log(222)
+    }
+    console.log(fn1)
+    fn1
+    // 函数声明和表达式定义区别 函数声明定义的函数在控制台会带名字
+    //                        函数表达式定义的函数在控制台不带名字
+
+    // 3.构造函数定义(基本不用)
+    // var fn2 = new Function("console.log('333')")
+    // console.log(fn2)
+  </script>
+</body>
+</html>

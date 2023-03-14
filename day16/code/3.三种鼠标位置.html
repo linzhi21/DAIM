@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #box{
+      width: 300px;
+      height: 300px;
+      background-color: red;
+      margin: 100px;
+    }
+  </style>
+</head>
+<body style="height:3000px">
+  <div id="box"></div>
+  <script>
+    window.onload=function(){
+      var box = document.querySelector('#box')
+      box.onclick = function(e){
+        e = e || window.event
+        console.log(e)
+        // clientX  clientY 参照视口 来获取你鼠标的位置
+
+        // offsetX  offsetY 参照自身元素的左上角 来获取你鼠标的位置
+
+        // pageX  pageY  参照页面的左上角 来获取你的鼠标位置
+      }
+    }
+  </script>
+</body>
+</html>

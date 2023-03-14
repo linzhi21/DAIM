@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 60px;
+    }
+    button{
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <button disabled="disabled">确认(5)</button>
+  <script>
+    window.onload=function(){
+      var btn =document.querySelector('button')
+      var num = 5
+      setInterval(function(){
+        if(num<=1){
+          btn.innerHTML = '确认'
+          btn.disabled = false
+        }else{
+          num--
+          btn.innerHTML = '确认('+num+')'
+        } 
+      },1000)
+    }
+  </script>
+</body>
+</html>

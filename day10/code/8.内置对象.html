@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // js内置对象  String  Number  Boolean
+    // var a = 1
+    // var str = '哈哈哈'
+    // var flag = true
+    // console.log(str[0])
+    // console.log(str.length)
+    // console.log(a.b)
+    // console.log(flag.b)
+   
+    var und=undefined
+    console.log(und.b)
+    // var und = undefined
+    // console.log(und.b)
+    // TypeError: Cannot read properties of undefined (reading 'b')
+    // var nul =null
+    // console.log(nul.b)
+    // TypeError: Cannot read properties of null (reading 'b')
+    // 可以进行对象的操作 ：数字 字符串 布尔值
+    // var str = '哈哈哈'
+    // console.log(str.a)
+    // console.log(str)
+    // 偷偷做了一些事情
+    // 1.  str.a  调用 var str = new String()
+    // 2.进行完对象的操作
+    // 3.再让这个实例化对象变成'哈哈哈'
+
+
+    // 分析a.b
+    // a一定是对象吗？ 不一定
+    // a是对象    a一定存在吗？ 当前作用域没有a这个对象 沿着作用域链一直向上查找  直到找到全局
+    //            找到全局 有就用 没有报错 报什么错呢？a没有定义
+    //           b一定在a对象身上吗？a身上没有b 沿着原型链一直往上查找  找到就用 找不到呢？返回undefined
+    
+    // a不是对象  一定会报错？不一定 因为对于数字 字符串 布尔值来说是有包装对象的 结果是undefined
+
+  </script>
+</body>
+</html>

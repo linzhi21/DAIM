@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // continue
+    // 出现在循环当中
+    // 作用：可以在循环中跳出某一次循环 返回至i++ 执行下一次
+
+    // 打印1~100以内所有的能整除3的数字
+    // for(var i =1;i<=100;i++){
+    //   if(i%3==0){
+    //     console.log(i)
+    //   }
+    // }
+
+    // for(var i =1;i<=100;i++){
+    //   if(!(i%3==0)){
+    //     continue
+    //   }
+    //   console.log(i)
+    // }
+
+    for(var i =0;i<5;i++){
+      // 如果if{}当中的代码只有一行 那么可以省略掉{}
+      if(i==3) continue
+      console.log(i)
+    }
+  </script>
+</body>
+</html>

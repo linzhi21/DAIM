@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>我是一个按钮</button>
+  <script>
+    // js的代码有同步代码和异步代码
+    // 异步代码  定时器当中的回调函数   事件回调
+    // 不是所有的回调函数都是异步的 像数组方法当中的回调函数就不是异步的
+    // [1,2,3].forEach(function(item){
+    //   console.log(item)
+    // })
+
+    // 程序  就是一个文件 静静的躺在你的硬盘(c盘 d盘)当中  静态的
+    // 进程  程序执行叫做进程  进程是动态的
+
+    // 进程  车间
+    // 线程  线程是进程的基本执行单位  工人
+    // 一个进程所有的任务都在线程当中去执行的 进程想要执行任务 必须的有线程
+
+    // js是单线程(只有一个工人)
+    // 同步代码一定优先于异步代码执行  异步代码想要执行 必须等我所有的同步执行完才行
+    // console.log(1)
+    // 是同步设置的setTimeout  当中的回调函数是异步的
+    var id = setTimeout(function(){
+      console.log(2)
+    },5000)
+    console.log(id,'id')
+   
+    // 假设有50000行
+    // console.log(3)
+    // console.log(3)
+    // console.log(3)
+    // console.log(3)
+    // console.log(3)
+    // console.log(3)
+    // console.log(3)
+    // console.log(3)
+    // console.log(3)
+
+
+    console.log(1)
+    var btn = document.querySelector('button')
+    btn.onclick=function(){
+      console.log(2)
+    }
+    console.log(3)
+    
+  </script>
+</body>
+</html>

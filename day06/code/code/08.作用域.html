@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 作用域
+    // 是什么:变量起作用的范围
+    // 为什么：隔离变量
+    // !!!!  作用域是什么时候确定的  函数只要声明了 作用域就确定死了 和函数调用一毛钱关系都没有!!!!!
+    // 在es5当中 分两个作用域 一个是全局作用域(函数外部) 一个是局部作用域(函数内部)  函数声明为界
+
+    // fn 在全局作用域
+    // c  在局部作用域
+
+    var a = 1
+    function fn(c){
+      var a = 2
+      console.log(a) //2
+    }
+    fn()
+    console.log(a)  //1
+  </script>
+</body>
+</html>

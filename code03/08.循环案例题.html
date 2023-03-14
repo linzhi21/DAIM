@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 打印1-100之间的整数
+    // for(var i =1;i<=100;i++){
+    //   console.log(i)
+    // }
+    // console.log(i,'循环结束i的值')
+
+
+		// 打印1-100之间的偶数
+    // for(var i =1;i<101;i++){
+    //   if(i%2==0){
+    //     console.log(i)
+    //   }
+    // }
+
+    // for(var i=1;i<101;i++){
+    //   if(i%2==0){
+    //     console.log(i)
+    //   }
+    // }
+/* for(var i=1; i<100; i++){
+  if(i%3==0||i%7==0){
+    console.log(i)
+  }
+} */
+		// 计算1到100的和
+    // 累加器
+    // var num = 0
+    // for(var i =1;i<=100;i++){
+    //   num = num + i
+    // }
+    // console.log(num)
+
+
+		// 计算1-100之间所有偶数的和
+    // var num = 0
+    // for(var i =1;i<=100;i++){
+    //   if(i%2==0){
+    //     num+=i
+    //   }
+    // }
+    // console.log(num)
+
+    // 计算100的阶乘 1*2....*100 
+    // var num = 1
+    // for(var i =1;i<=100;i++){
+    //   num *= i
+    // }
+    // console.log(num)
+
+    // 打印三位数位上有3或者7的数字   
+    // for(var i =100;i<=999;i++){
+    //   var a = parseInt(i/100)
+    //   var b = parseInt(i/10%10)
+    //   var c = i%10
+    //   if(a==3||a==7||b==3||b==7||c==3||c==7){
+    //     console.log(i)
+    //   }
+    // }
+
+    for (var i = 100; i < 999; i++) {
+      var a = parseInt(i/100) ;
+      var b = parseInt( i/10%10);
+      var c = i%10
+      if (a*a*a+b*b*b+c*c*c ==i) {
+        console.log(i);
+      }
+    }
+    // 求100-999之间的水仙花数。
+  /*   for(var i =100;i<=999;i++){
+      var a = parseInt(i/100)
+      var b = parseInt(i/10%10)
+      var c = i%10
+      if(a*a*a+b*b*b+c*c*c == i){
+        console.log(i)
+      }
+    } */
+ 
+
+  </script>
+</body>
+</html>

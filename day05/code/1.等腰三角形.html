@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+//       *      
+//      ***
+//     *****
+//    *******
+//   *********
+//  ***********
+// *************
+
+// 外层循环控制行 内层循环控制列
+    for(var i =0;i<7;i++){
+      // 这个for循环在控制每行当中打印几个空格
+      for(var j =0;j<6-i;j++){
+        document.write('&nbsp;')
+      }
+      // 这个for循环在控制每行中打印的*个数
+      for(var j =0;j<2*i+1;j++){
+        document.write('*')
+      }
+      document.write('</br>')
+    }
+  </script>
+</body>
+</html>

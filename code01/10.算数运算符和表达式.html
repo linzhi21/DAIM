@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 运算符和表达式
+    // 运算符：参与运算得符号 无意义
+    // 表达式：由变量或者常量与运算符组成得式子  有意义(一定有值)
+
+    // 算数运算符 + - * / %
+    var a = 10;
+    var b = 20;
+    console.log(a+b)
+    console.log(a-b)
+    console.log(a*b)
+    console.log(a/b)  //除法如果不能整除 会强制除  有小数点也要除完
+
+    // %
+    console.log(a%b)
+
+    // 1990.1.1起  开始三天打鱼两天晒网得生活 问未来的某一天在打鱼还是在晒网
+
+    // 总天数 y  周期数 5
+    // y % 5 
+
+    // %得使用场景
+    // 1. 可以判断一个数能不能整除另一个数  25%5  余数为零代表一定整除了
+    // 2. 可以去求各个位上的数字
+    //    678
+    //    百位  678 / 100  ==> 6.78 ==> 取整==> 6
+    //    十位  678 / 10 % 10 ==> 67.8 % 10 ==> 7.8 ==> 取整 ==> 7
+    //    个位  678 % 10  ==> 8
+    // 3. 求一个范围内的数
+    // 求0-4这个范围内得某一个数字
+    var num = 10
+    console.log(10%5)  
+    // 求0-99这个范围内得某一个数字  对谁取余  100
+    // 求1-99这个范围内得某一个数字
+    var x; //模拟任意一个数字
+    x % 99 + 1
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 三元运算符 三目  问号冒号
+    // 语法： 1   ?  2  : 3
+    // 执行过程：先拿到？左边的结果  这个结果如果不是布尔值  会被强转为布尔值
+    //          如果为真 则执行:左边的式子  :右边的不执行
+    //          如果为假 则执行:右边的式子  :左边的不执行
+      var a = 1
+      var b = 2
+      // console.log(a+b>6 ? a++ : --b)
+      console.log(a+b>6 ? a++ : --b)
+      console.log(a,b)
+
+      var a = 10;
+      var b = 20;
+      // console.log(a + b > 50 ? a++ : ++b);
+      console.log(a+b > 50 ? a++ :++b) //21
+      console.log(a,b);// 10,21
+
+      var a = 100;
+      var b = 200;
+      console.log('heihei'?a+b++:b--); // 100+200=300,b=201
+      console.log(a,b); // a=100,b=201
+
+
+      var str = '666';
+      var a = 0;
+      var c = (a && str)? str : (a++ && str); // c=0
+      c=(a&&str)?str:(a++&&str);
+      console.log(c,a);
+
+      var a = 5
+      var b = a<6?(a>7?a--:a>3?a++:--a):a=8
+      var b=a<6?(a>7?a--:a>3?a++:--a):a=8
+      // (a>7?a--:a>3?a++:--a)
+      // a>3?a++:--a
+      console.log(a,b) //6 5
+  </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 多分支
+
+    // 语法
+    // if(值,这个如果不是布尔值,会强转为布尔值){
+    //   代码块
+    // }else if(值,这个如果不是布尔值,会强转为布尔值){
+    //   代码块
+    // }else if(值,这个如果不是布尔值,会强转为布尔值){
+    //   代码块
+    // }else{
+    //   代码块
+    // }
+
+    // 执行过程
+    // 1.拿到if()当中的值
+    // 2.这个值如果不是布尔值 会强转为布尔值
+    // 3.为真执行if{}中的代码  为假 去看下一个if()当中的值  同上
+    // 4.如果都匹配不上  执行else的代码块
+
+    // 注意点：多分支当中 只可能执行一个
+      
+    // 输入体重判断属于什么样的体型
+      // 70 - 90  骨感美
+      // 90 - 120 性感美
+      // 120 - 150 贵妃美
+      // 150 - 200 丰满美
+      // 200 -300  灵魂美
+      // var weight = parseFloat(prompt('请输入你的体重'))
+      // // if(70<=weight<=90){
+      // //   console.log('骨感美')
+      // // }
+      // if(70<=weight&&weight<=90){
+      //   console.log('骨感美')
+      // }else if(90<weight&&weight<=120){
+      //   console.log('性感美')
+      // }else if(120<weight&&weight<=150){
+      //   console.log('贵妃美')
+      // }else if(150<weight&&weight<=200){
+      //   console.log('丰满美')
+      // }else if(200<weight&&weight<=300){
+      //   console.log('灵魂美')
+      // }else{
+      //   console.log('请输入70 - 300之间')
+      // }
+
+
+
+
+    // 输入一个数，来判断是周几
+      // var weekDay = parseFloat(prompt('请输入一个数字'))
+      // if(weekDay == 1){
+      //   console.log('今天是周一,真开心')
+      // }else if(weekDay == 2){
+      //   console.log('今天是周二,真开心')
+      // }else if(weekDay == 3){
+      //   console.log('今天是周三,真开心')
+      // }else if(weekDay == 4){
+      //   console.log('今天是周四,真开心')
+      // }else if(weekDay == 5){
+      //   console.log('今天是周五,真开心')
+      // }else if(weekDay == 6){
+      //   console.log('今天是周六,真开心')
+      // }else if(weekDay == 7){
+      //   console.log('今天是周日,真开心')
+      // }else{
+      //   console.log('请输入1-7之间的数字')
+      // }
+
+
+
+
+    // 输入一个数，如果这个数
+    // // 0 - 100之间      +5
+    // // 100 - 500之间   -5
+    // // 500 - 1000之间    *5
+    // // 1000 - 2000   /5
+    // // 如果不在以上区间内    原样输出
+
+    var num = parseFloat(prompt('请输入一个数'))
+    if(0<=num&&num<=100){
+      num = num +5
+      // num += 5
+      // console.log(num)
+    }else if(100<num && num <= 500){
+      num = num -5
+      // console.log(num)
+    }else if(500<num&&num<=1000){
+      num = num *5
+      // console.log(num)
+    }else if(1000<num&&num<=2000){
+      num = num /5
+      // console.log(num)
+    }else{
+      // console.log(num)
+    }
+    console.log(num)
+
+    // var num = 8;
+
+    // if(num>5){
+    //   num += 1;
+    // }else if(num == 9){
+    //  num += 2
+    // }else if(num == 11){
+    //   num += 3
+    // }
+
+    // console.log(num)
+  </script>
+</body>
+</html>

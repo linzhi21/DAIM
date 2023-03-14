@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 普通函数和构造函数的区别
+
+    // 普通函数和构造函数都是函数
+    // 他们两者只不过是调用方式不同 this指向就不同 retun结果也不一样
+    // 一个函数可以当作普通函数来用 也可以当作构造函数来用
+    // 普通函数和构造函数的区分：只有调用的时候才能区分开 看有没有new这个关键字 有就是构造函数调用
+    //                         函数声明的时候不能确定是普通函数还是构造函数
+    // 构造函数首字母通常会大写
+
+    // this
+    // 1.普通函数调用this指向window   xxx()
+    // 2.对象的方法当中this指向这个对象  xxx.yyy()
+    // 3.构造函数当中this指向实例化对象
+    // 4.使用call apply bind可以任意需修改this指向
+    // 5.事件回调当中的this指向事件源
+
+    function Person(name,age,height){
+      this.name=name  //window.name='张三'
+      this.age=age
+      this.height =height
+      this.run=function(){
+        console.log('跑的很快')
+      }
+      return [1,2,3]
+    }
+    
+    // 普通函数
+    // 1.this指向window  内部代码相当于在给window身上增加属性或修改属性
+    // 2.return  
+    //        2.1 只有return关键字 后面没值 undefined
+    //        2.2 没写return undefined
+    //        2.3 写了return return后面也写了值 返回值就是return后面的值
+    var result = Person('张三',18,180)
+     console.log(window)
+     console.log(result)
+
+    // function Person(name,age,height){
+    //   this.name=name  //p1.name = '李四'
+    //   this.age=age  //p1.age = 19
+    //   this.height =height
+    //   this.run=function(){
+    //     console.log('跑的很快')
+    //   }
+    //   return //{a:1,b:2}
+    // }
+    // 构造函数
+    // 1.this指向实例化对象 内部代码相当于给实例化对象身上增加属性（实例化过程）
+    // 2.return
+    //        2.1 写了return关键字后面没值或者没写return或者return了一个基本数据类型 返回值都是实例化对象
+    //        2.2 如果return了一个引用数据类型的数据 返回值就是这个引用类型数据了 不再是实例化对象
+    // var p1 = new Person('李四',19,190)
+    // console.log(p1)
+  </script>
+</body>
+</html>

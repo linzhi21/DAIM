@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 双分支
+
+    // 语法
+    // if(值，这个值如果不是布尔值，会强转为布尔值){
+    //   代码块
+    // }else{
+    //   代码块
+    // }
+
+    // 执行过程
+    // 1. 拿到if()中的值
+    // 2. 看这个值是不是布尔值 如果不是 会强转为布尔值
+    // 3. 这个值为true 会执行if{}中的代码 为假 执行else{}的代码
+
+    // 理解：不管是单分支还是双分支 其实还是从一个事情的双面性考虑的
+    //      只不过单分支只处理为真的情况 为假不处理  双分支 真假两面都会处理
+
+      // 天气好就去看电影，不好就写代码
+      // var weather = true
+      // weather = false
+      // // if(weather){
+      // //   console.log('去看电影')
+      // // }else{
+      // //   console.log('流着泪开心的去写代码')
+      // // }
+      // weather?console.log('看电影'):console.log('流着泪开心的去写代码')
+      // var weather = true
+      // weather=false
+      // if(weather){
+      //   console.log('去看电影')
+      // } else{
+      //   console.log('流着泪开心的去写代码')
+      // }
+      // weather?console.log('看电影'):console.log('流着泪开心的去写代码')
+
+
+
+		// 输入一个数，这个数如果大于0就-1输出，不大于0就+1输出
+    // if else写法    
+      // var num = parseFloat(prompt('请输入一个数'))
+      // if(num>0){
+      //   num-=1
+      //   // num--
+      //   // --num
+      //   // num = num - 1
+      //   // console.log(num)
+      // }else{
+      //   num+=1
+      //   // num++
+      //   // ++num
+      //   // num = num+1
+      //   // console.log(num)
+      // }
+      // console.log(num)
+        // var num=parseFloat(prompt('请输入一个数'))
+        // if(num>0){
+        //   num-=1
+        //   console.log(num)
+        // }else{
+        //   num+=1
+        //   console.log(num)
+        // }
+       
+    // 三元表达式写法
+    // 如果双分支当中只有一行代码 那么可以用三元表达式去做
+    // var num = parseFloat(prompt('请输入一个数'))
+    // num > 0 ? num-=1:num+=1 
+    // console.log(num)
+          var num=parseFloat(prompt('请输入一个数'))
+          num>0? num-=1:num+=1
+          console.log(num)
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // && || 特殊情况 只要两边不是条件表达式(只有一侧不是就是特殊情况)
+
+    // &&
+    // var str = '特殊情况' //对于字符串来说 非空即为真
+    // var num = 123
+    // console.log(str && num) //123
+
+    // var flag = false
+    // console.log(flag && 1<2)//false
+
+    // var num = 0 //对于数字来说 非0即为真
+    // var a = 6;
+    // console.log(num && a--) //0
+    // console.log(a)
+
+    // ||
+    // var str = '特殊情况' //对于字符串来说 非空即为真
+    // var num = 123
+    // console.log(str || num) //'特殊情况'
+
+    // var str = '特殊情况' //对于字符串来说 非空即为真
+    // var num = 123
+    // console.log(str || ++num) 
+    // console.log(num)
+
+    // var flag = false
+    // var str ='太难了'
+    // console.log(flag || str)
+
+    // 特殊情况总结  （通用情况）
+    // 正常情况得案例 也可以使用特殊情况得总结
+    // && 前面为真 则取后面得值做为表达式得值 
+    //    前面为假 则取前面得值做为表达式得值  后面得看都不看  不执行
+    // || 前面为真 则取前面得值作为表达式得值  后面得看都不看  不执行
+    //    前面为假 则取后面的值做为表达式得值
+    // 坑： 1. 取值做为表达式得值 注意 不是取这个值转化出来的布尔值！！！
+    //     2. 后面得代码有可能是不执行的
+
+
+    var a = 10;
+    a = 0;
+    var b = '二狗子';
+    console.log(a && b);//对于数字，非0即为真
+
+
+    var a = 0.5;
+    a = 0;
+    var b = 2;
+    console.log(a && b++);// 0
+    console.log(b); // 2
+
+
+    var str = 'i love you~';
+    str = '';
+    var c = 10;
+    console.log(str || ++c);//对于字符串，非空(空串)即为真
+    console.log(c);
+
+    var c= 'a'&&'' || (true || (3<1 && 5<6))
+    //  '' || (true || (3<1 && 5<6))
+    // (true || (3<1 && 5<6))
+    console.log(c) 
+  </script>
+</body>
+</html>

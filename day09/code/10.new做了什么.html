@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Person(name,age,height){
+      this.name=name 
+      this.age=age  
+      this.height = height
+      this.run=function(){
+        console.log('跑的很快')
+      }
+    }
+    // var res = Person('张三',18,180)
+    var res = new Person('张三',18,180)
+    console.log(res)
+
+    // new做了哪些事情
+    // 1.在堆当中开辟了一个空间(为你的实例化对象准备的)
+    // 2.会让函数当中的this指向于你刚才开辟的空间
+    // 3.老老实实执行函数内部的代码 把相应的属性或者方法加到实例化对象身上(实例化过程)
+    // 4.让其 实例化对象的 _proto_ 属性 指向其构造函数 身上的 protype属性
+    // 4.把实例化对象的空间地址返回出来
+  </script>
+</body>
+</html>

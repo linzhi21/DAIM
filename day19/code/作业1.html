@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     *{
+      margin: 0;
+      padding: 0;
+    }
+    div{
+      width: 150px;
+      height: 150px;
+      background-color: red;
+      position: absolute;
+      z-index: 9;
+    }
+    img{
+      width: 120px;
+      height: 80px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <img src="img/1.jpg" alt="">
+  <script>
+    window.onload = function(){ 
+ 
+      var box = document.querySelector('div')
+      var imgNode = document.querySelector('img')
+
+      box.onmousedown=function(e){
+        e = e || window.event
+
+        var eleX = box.offsetLeft
+        var eleY = box.offsetTop
+
+        var startX = e.clientX
+        var startY = e.clientY
+
+        document.onmousemove=function(e){
+          e = e ||window.event
+
+          var endX = e.clientX
+          var endY = e.clientY
+
+          var disX = endX - startX
+          var disY = endY - startY
+
+          var lastX = eleX+disX
+          var lastY = eleY+disY
+
+          if(lastX >document.documentElement.clientWidth-box.offsetWidth-50){ 
+            lastX = document.documentElement.clientWidth-box.offsetWidth
+          }else if(lastX<50){ 
+            lastX = 0
+          }
+
+          if(lastY>document.documentElement.clientHeight-box.offsetHeight-50){ 
+            lastY=document.documentElement.clientHeight-box.offsetHeight
+          }else if(lastY<50){ 
+            lastY = 0
+          }
+          
+          box.style.left = lastX+'px'
+          box.style.top = lastY+'px'
+                   
+          var boxL = lastX + box.offsetWidth          
+
+          var boxT = lastY + box.offsetHeight
+          var imgT = imgNode.getBoundingClientRect().top
+
+          var boxR = lastX
+          var imgR = imgNode.getBoundingClientRect().left +imgNode.offsetWidth
+
+          var boxB = lastY
+          var imgB = imgNode.getBoundingClientRect().top +imgNode.offsetHeight
+
+          if(boxL<imgL||boxT<imgT||boxR>imgR||boxB>imgB){
+            imgNode.src = 'img/1.jpg'
+          }else{
+            imgNode.src = 'img/2.jpg'
+          }
+        }
+        document.onmouseup=function(){
+          document.onmousemove = document.onmouseup= null
+        }
+        e.preventDefault()      
+      }
+    }
+
+    
+  </script>
+</body>
+</html>

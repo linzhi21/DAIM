@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function fn(a,b){
+    //   console.log(111)
+    //   return 23
+    //   console.log(222)
+    // }
+    // 函数声明三要素
+    // 功能:要看函数名字 函数名字要见名知义  本质是代码块(函数体) 但是之后可能有几百行代码 看起来不方便
+    // 参数:形参 全称形式参数  (可写可不写 要用就写 不用就不写)
+    //      本质:在函数内部声明了两个变量
+    // 返回值:1.看函数体内部return后面的值
+      //        return 关键字没写  返回值为undefined
+      //        return 写了关键字  关键字后面面没有写值 返回值也是undefined
+      //        return 写了关键字  关键字后面也有值  返回值就是return后面的值
+      //      2.return 后面的代码不会执行 在函数体内部看到return 代表函数结束了
+
+    // fn(1,2)
+    // 函数调用三要素
+    // 功能 函数调用的名字必须和函数声明的名字一样
+    // 参数 实参 全称实际参数
+    //          本质是在给函数声明的形参赋值
+    // 返回值:函数调用本质是一个表达式 那么她一定是有值的
+    //        值看函数声明return的值
+
+    function fn(a,b){
+      console.log(111)
+      return 23
+      console.log(222)
+    }
+    fn(1,2)
+
+
+    // function fn(a,b){
+    //   console.log(a)
+    // }
+    // fn(1,2)
+
+    // 特殊情况 实参多于形参  你给我了 但是我不要
+    // function fn(a,b){
+    //   console.log(a,b)
+    // }
+    // fn(1,2,3)
+    // 特殊情况 形参多于实参  我需要 但是你不给
+    function fn(a,b,c){
+      console.log(a,b,c)
+    }
+    fn(11,22)
+
+    </script>
+</body>
+</html>

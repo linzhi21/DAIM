@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // this 代表函数的执行者  本质是一个对象
+    // 调用方式不同 this指向就不同
+    // this出现场景
+    // 1.普通函数调用 this指向window
+    // 2.对象的方法调用 这个方法中的this指向这个对象
+    // 3.构造函数中的this  指向实例化对象
+    // 4.事件回调当中的this指向事件源
+    // 5.call aplly bind 任意修改this指向
+
+    // var obj ={
+    //   name:'李四',
+    //   eat:function(){
+    //     console.log(this)
+    //     function fn1(){
+    //       console.log(this)
+    //     }
+    //     fn1()
+    //   }
+    // }
+    // obj.eat()
+
+    //   function fn(){
+    //     var obj ={
+    //       run:function(){
+    //         fn2()
+    //         console.log(this)
+    //         function fn2(){
+    //           console.log(this)
+    //         }
+    //       }
+    //     }
+    //     console.log(this)
+    //     obj.run()
+    //   }
+    //  fn()
+
+    // function fn(){
+    //   console.log(this)
+    // }
+    // fn()
+    // new fn()
+    // fn.call({a:1})
+
+    
+  </script>
+</body>
+</html>

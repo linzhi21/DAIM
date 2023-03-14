@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 编写函数返回1到n的和
+    function add(n){
+      var num =0
+      for(var i =1;i<=n;i++){
+        num+=i
+      }
+      return num
+    }
+    console.log(add(5))
+    console.log(add(10))
+
+
+    // 编写函数返回一个数的阶乘
+    // function factorial(n){
+    //   var num = 1
+    //   for(var i =1;i<=n;i++){
+    //     num*=i
+    //   }
+    //   return num
+    // }
+    // var result = factorial(10)
+    // console.log(result)
+
+
+
+    // 编写函数实现返回某个数组的最大值，最小值
+  //   function arrMaxAndMin(arr){
+  //     var max = arr[0]
+  //     var min =arr[0]
+  //     for(var i=1;i<arr.length;i++){
+  //       if(max<arr[i]){
+  //         max = arr[i]
+  //       }
+  //       if(min>arr[i]){
+  //         min = arr[i]
+  //       }
+  //     }
+  //     return [max,min] //return后面只能跟一个值
+  //   }
+  // //  console.log('最大值:'+arrMaxAndMin([1,3,5,7,9])[0],'最小值:'+arrMaxAndMin([1,3,5,7,9])[1])
+  //   var result = arrMaxAndMin([1,3,5,7,9])
+  //   console.log('最大值:'+result[0],'最小值:'+result[1])
+
+
+    // 封装函数加工数组，每一项加10输出
+    function addTenLog(arr){
+      for(var i =0;i<arr.length;i++){
+        console.log(arr[i]+10)
+      }
+    }
+    addTenLog([2,4,6,8])
+
+
+
+    // 封装函数实现打印1到N的质数;
+    // function printPrimeNumbers(n){
+    //   var flag = true
+    //   for(var i =1;i<=n;i++){
+    //     for(var j =2;j<i;j++){
+    //       if(i%j==0){
+    //         flag =false
+    //         break
+    //       }
+    //     }
+    //     if(flag&&i!=1){
+    //       console.log(i)
+    //     }
+    //     flag =true
+    //   }
+    // }
+    // printPrimeNumbers(100)
+
+
+    // 封装函数返回对数组排序后的结果；
+      function arrSort(arr){
+        for(var i =0;i<arr.length-1;i++){
+          for(var j=0;j<arr.length-1-i;j++){
+            // if(arr[j]>arr[j+1]){ //从小到大
+            if(arr[j]<arr[j+1]){  //从大到小
+              var temp =arr[j]
+              arr[j]=arr[j+1]
+              arr[j+1] = temp
+            }
+          }
+        }
+        return arr
+      }
+      var result = arrSort([1,23,6,9])
+      console.log(result)
+
+
+    // 封装函数返回对数组翻转后的结果
+    
+    // 封装函数返回对数组去重后的结果
+    for(var i=0; i<arr.length/2; i++){
+        var temp=arr[i]
+        arr[i]=arr[arr.length-1-i]
+        arr[arr.length-1-i]=temp
+       }
+       console.log(arr)
+    // 	数组去重
+      var arr = [1,3,5,5,7,7,9]
+      var newArr = []
+      var flag = true
+      for(var i =0;i<arr.length;i++){
+        for(var j =0;j<newArr.length;j++){
+          if(arr[i] == newArr[j]){
+            // 代表有重复项
+            flag = false
+            break
+          }
+          
+  </script>
+</body>
+</html>

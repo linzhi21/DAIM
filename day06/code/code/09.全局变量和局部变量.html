@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 全局变量和局部变量
+    // 在全局作用域当中的变量叫做全局变量
+    // 在局部作用域打中的变量叫做局部变量
+
+    // 第一种
+    // var a = 1
+    // function fn(){
+    //   var a =2
+    //   console.log(a,'局部') 
+    // }
+    // fn()
+    // console.log(a,'全局') 
+
+    // 第二种
+    // var a = 1
+    // function fn(){
+    //   console.log(a,'局部') 
+    // }
+    // fn()
+    // console.log(a,'全局') 
+
+    // 第三种
+    
+    // function fn(){
+    //   var a = 2
+    // }
+    // fn()
+    // console.log(a,'全局') 
+
+    // 总结：
+    // 第一种：全局变量和局部变量都有 那么各自用各自的
+    // 第二种：全局变量有  局部变量没有 局部是可以使用全局的
+    // 第三种：全局没有  局部有 全局不可以用局部的 会报错 引用错误 a没有定义
+
+
+    for(var i =0;i<5;i++){
+      console.log(i)
+    }
+  </script>
+</body>
+</html>

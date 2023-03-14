@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 了解即可
+    // 因为想要执行异步代码 必须执行完所有的同步代码 
+    // 但是同步代码当中有可能执行了5s 那定时器的1s早就过了
+    // var a = 1
+    // console.log('我喜欢你')
+
+    // setTimeout(function () {
+    //   console.log('我爱你')
+    // }, 1000)
+
+    // for (var i = 0; i < 40000; i++) {
+    //   for (var j = 0; j < 30000; j++) {
+    //     a++
+    //   }
+    // }
+
+    // var arr = [2,3]
+    // console.log(1)
+    // arr.forEach(function(item){
+    //   console.log(item)
+    // })
+    // console.log(4)
+
+
+    var a = 1
+    console.log('我喜欢你')
+
+    setTimeout(function () {
+      console.log('你好')
+    }, 1000)
+
+    setTimeout(function () {
+      console.log('世界')
+    }, 4000)
+    
+    for (var i = 0; i < 40000; i++) {
+      for (var j = 0; j < 40000; j++) {
+        a++
+      }
+    }
+
+  </script>
+</body>
+
+</html>

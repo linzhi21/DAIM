@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 强制类型转换 (显示)
+    // Number() String() Boolean()
+
+    // 1. 其他类型转数字
+    // Number()
+    // 1-1 数字转数字
+    var num = 1
+    // 1-2 字符串转数字
+    num = '123456fgahfga' //NaN  NaN是一个数字的数据类型 但是他的意思不是一个数字
+    num = '123456'  //123456
+    num = '   123456' //123456
+    num = '123456   ' //123456
+    num = '123 456' //NaN
+    num = ''  //0
+    num = '     ' //0
+    num = '1.23e3'
+    
+    // 1-3 布尔值转数字
+    num = true
+    // num = false
+    console.log(Number(num))
+    // 1-4 undefined转数字
+    num = undefined
+    console.log(Number(num))
+
+    // 1-5 null转数字
+    num = null
+    console.log(Number(num))
+
+    
+    // 总结：
+    // 字符串转数字：整体来看 如果整体是一个数字 那么可以转出来  前后有留白(空格)没关系 但是中间有留白 不行
+    //              空串和空白串转出来数字都是0
+    // 布尔值转数字: true转出来是1  false转出来是0
+    // undefined转数字: NaN
+    // null转数字：0
+
+
+    // 2 其他类型转字符串
+    var str = 1
+    str = true
+    str = undefined
+    str = null
+    console.log(String(str))
+
+    // 总结：无论是什么数据类型 转字符串 把值加引号就可以了
+
+    // 3 其他类型转布尔值
+    // 3-1 数字转布尔值
+    var bol = 1 //true
+    bol = 0 //false
+    bol = 0.5 //true
+    bol = -2 //true
+    bol = null//false
+    console.log(Boolean(bol))
+
+    // 3-2 字符串转布尔值
+    bol = '' //false
+    bol = '    ' //true
+    bol = 'fhajfhja213465' //true
+    bol = '0' //true
+    
+
+    // 3-3 undefined转布尔值
+    bol = undefined
+
+    // 3-4 null转布尔值
+    bol = null
+    console.log(Boolean(bol))
+    // 总结：数字转布尔值 非0以及非NaN就是真
+    //      字符串转布尔值  非空（空串）即为真
+    //      undefined转布尔值 false
+    //      null转布尔值  false
+  </script>
+</body>
+</html>

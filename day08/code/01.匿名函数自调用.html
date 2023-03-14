@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // 匿名函数自调用 IIFE
+
+    function fn(){
+      console.log('函数')
+    }
+    fn()
+    fn()
+    fn();
+
+    // 语法
+    // (function(形参){
+    //   // 代码块
+    // })(实参)
+    // for(;;); //死循环简写 
+
+
+    // 样子长得一样而已 地址不是一样的！！！
+    // (function(a,b){
+    //   console.log(a,b)
+    // })(1,2)
+    // (function(a,b){
+    //   console.log(a,b)
+    // })(1,2)
+    // (function(a,b){
+    //   console.log(a,b)
+    // })(1,2)
+    // 坑：匿名函数自调用之前的代码手动加;
+
+    // 匿名函数使用场景
+    // 1.一般写项目初始化的时候会用
+    // 2.防止外部变量命名污染
+
+    // 匿名函数特点
+    // 1.只会执行一次
+    // 2.匿名函数自身不会预解析 但是这个函数的内部是会做预解析的！
+    (function(){
+      console.log(a)
+      var a = 1
+      console.log(a)
+    })()
+
+    // (function(形参){
+    //   // 代码块
+    // })(实参)
+    (function(){
+      console.log(a)
+      var a=1
+      console.log(a)
+    })()
+
+  </script>
+</body>
+</html>

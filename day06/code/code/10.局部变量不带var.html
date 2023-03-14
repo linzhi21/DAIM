@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 局部变量不带var
+
+    var a = 10;
+    var b = 20;
+    var c = 30;
+    var d = 40
+    function fn () {
+      var a = 100;
+      var b = 200;
+      var c = 300;
+      // var d = 400;
+      // d = 400; //这里相当于把全局d的40改成了400  隔山打牛！！！
+      e = 500;//相当于在全局声明了一个e变量 值为500
+      // console.log('局部',a, b, c, d)
+      console.log('局部',e)
+    }
+    fn()
+    // console.log('全局',a, b, c, d)
+    console.log('全局',e)
+
+
+    // 局部变量不带var过程
+    // 1.先看函数内部有没有声明这个变量 如果有 就是局部变量
+    // 2.如果函数内部没有var这个变量 找形参 形参有就是局部变量
+    // 3.如果函数没声明形参也没有，那么看全局中有没有这个变量，有的话就是在操作全局变量
+    // 4.全局也没有这个变量 那么会在全局当中声明一个变量
+
+    // 区分开undefined和报错
+    // var t;
+    // console.log(t)
+    // console.log(y)
+
+    var a=0;
+    function fn1(){
+      var a=1;
+      function fn2(){
+        var a=2;
+        function fn3{
+          var a=3;
+          console.log(a)
+        }
+      }
+    }
+
+    var num=10;
+    function fun(){
+      var num=20;
+      fun2();
+    }
+    function fun2(){
+      console.log(num);
+    }
+    fun();
+
+    console.log(a)
+    var a='我是变量';
+    function a(){
+      
+    }
+      </script>
+</body>
+
+</html>

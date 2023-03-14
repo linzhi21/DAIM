@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // new
+    // 1.先会在堆内存当中开辟空间
+    // 2.会让函数内部的this指向你刚才开辟的哪个空间
+    // 3.实例化过程：老老实实执行函数体代码 相当于是给实例化对象身上增加属性
+    // 4.返回出来实话对象的地址
+
+    function Dog(name){
+      this.name=name
+    }
+    var d1 = new Dog('小黑')
+  </script>
+</body>
+</html>

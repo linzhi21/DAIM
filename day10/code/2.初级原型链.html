@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function Dog(name,age){
+    //   this.name=name
+    //   this.age=age
+    // }
+    // Dog.prototype.run=function(){
+    //   console.log('跑的很快,我是显示原型对象的')
+    // }aaaaa
+    // var d1 = new Dog('小黑',2)
+    // var d2 = new Dog('小花',3)
+
+    // // console.dir(Dog.prototype)
+    // console.log(d1,d2)
+
+    // function Phone(size,band){
+    //   this.size=size
+    //   this.band=band
+    // }
+    // Phone.prototype.feel=function(){
+    //   console.log('使用体验极佳，我是显示原型对象的')
+    // }
+    // var p1=new Phone(6.7,'华为')
+    // var p2=new Phone(6.4,'小米')
+    // console.dir(Phone.prototype)
+    // console.log(p1,p2)
+    // 原型链:查找对象属性的过程
+    // 原型链作用:让咱们去查找对象身上没有的属性
+
+    // 原型链比较重要的一些话
+    // 1.只要是函数就会有pototype属性(显示原型对象)
+    // 2.只要是对象 就会有__proto__（隐式原型对象）
+    // 3.prototype这个对象身上一定会有一个constructor属性(构造器),他一定会指向prototype属性所在的函数
+    // 4.所有的实例化对象隐式原型会指向其构造函数的显示原型
+    // 5.所有的原型对象都是Object的实例
+    var str='shirn345892'
+    console.log(str.indexOf('5'))
+    console.log(str.slice(3,7))
+    console.log()
+  </script>
+</body>
+</html>

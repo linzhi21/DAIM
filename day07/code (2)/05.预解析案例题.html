@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 规则:
+    // 预解析完成的代码 一行一行从上至下去执行！！！！
+    // 1.先预解析函数声明定义的函数，
+    //   如果提升的时候发现函数同名了，那么后面的函数会覆盖前面的函数
+    //   函数提升的时候整体提升
+    // 2.再去提升带var的变量，
+    //   提升变量时候同名，会忽略,后面同名的变量会被忽略，提升后后面的变量直接赋值,如a=1
+    //   只提升变量名(var a) 变量的值是不会提升的
+    // 3.函数表达式定义的函数 预解析规则按照带var变量对待
+    //   var  fn = function(){}
+    // 4.变量不带var  不会做预解析
+    // 5.函数内部也会做预解析
+
+
+    // 7.
+    console.log(a);
+    var a = 0;
+    console.log(a);
+    // function fn () {
+    //   console.log(a);
+    //   a = 1;
+    //   console.log(a);
+    // }
+    fn()
+    // function fn () {
+    //   console.log(a);
+    //   var a = 1;
+    //   console.log(a);
+    // }
+
+    var fn = function () {
+      console.log(a);
+      a = 1;
+      console.log(a);
+    }
+    fn();
+    var a = 100;
+    console.log(a);
+
+//tisheng 
+    function fn () {
+      console.log(a);
+     a = 1;
+      console.log(a);
+    }
+    var a
+    var fn
+    console.log(a)
+    a=0
+    console.log(a)
+    fn()
+    fn = function () {
+      console.log(a);
+      a = 1;
+      console.log(a);
+    }
+    fn();
+    a = 100;
+    console.log(a);
+    // 提升之后的
+
+    // function fn () {
+    //   console.log(a);
+    //   a = 1;
+    //   console.log(a);
+    // }
+    
+
+    // var fn 
+    // var a
+
+    console.log(a);
+    a = 0;
+    console.log(a);
+    
+    fn()
+    
+
+    fn = function () {
+      console.log(a);
+      a = 1;
+      console.log(a);
+    }
+    fn();
+    // a = 100;
+    console.log(a);
+
+    
+
+
+
+    // 6.
+    // console.log(a);
+    // var a = 0;
+    // console.log(a);
+    // function fn () {
+    //   console.log(a);
+    //   a = 1;
+    //   console.log(a);
+    // }
+    // fn()
+    // console.log(a);
+    // 提升之后的代码
+    // function fn () {
+    //   console.log(a);
+    //   a = 1;
+    //   console.log(a);
+    // }
+    // var a
+    // console.log(a);
+    // a = 0;
+    // console.log(a);
+    // fn()
+    // console.log(a);
+
+
+    // 5.
+    // console.log(a);
+    // var a = 0;
+    // console.log(a);
+    // function fn(){
+    //   console.log(a);
+    //   var a = 1;
+    //   console.log(a);
+    // }
+    // fn()
+    // console.log(a);
+    // 预解析之后的代码
+    // function fn(){
+    //   console.log(a);
+    //   var a = 1;
+    //   console.log(a);
+    // }
+    // var a
+    // console.log(a);
+    // a = 0;
+    // console.log(a);
+    // fn()
+    // console.log(a);
+
+
+
+    // 4.
+    // console.log(a());
+    // var a = '我是变量';
+    // function a(){ console.log('我是函数') }
+    // console.log(a);
+    // 预解析之后的代码
+    // function a(){ console.log('我是函数') }
+    // // var a
+    // console.log(a());
+    // a = '我是变量';
+    // console.log(a);
+
+
+    // 3.
+    // console.log(a);
+    // var a = '我是变量';
+    // function a(){ console.log('我是函数') }
+    // console.log(a);
+    // 预解析之后
+    // function a(){ console.log('我是函数') }
+    // // var a
+    // console.log(a);
+    // a = '我是变量';
+    // console.log(a);
+
+
+    // 1.
+    // console.log(a);
+    // a = 0;
+
+    // 2.
+    // console.log(a);
+    // var a = 0;
+    // console.log(a);
+
+    // 预解析之后的
+    // var a
+    // console.log(a);
+    // a = 0;
+    // console.log(a);    
+  </script>
+</body>
+
+</html>

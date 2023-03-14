@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // var num;
+    // num = 123;
+    // var obj = {
+    //   num: 456,
+    //   fn: function () {
+    //     console.log(num)
+    //     console.log(this.num)
+    //   }
+    // }
+    // num = 789
+    // obj.fn()
+
+
+
+    function test (person) {
+      person.age = 18
+      person = {
+        name: 'yyy',
+        age: 16
+      }
+      return person
+    }
+    var p1 = {
+      name: 'yck',
+      age: 17
+    }
+    var p2 = test(p1)
+    console.log(p1.name, p2.name)
+    console.log(p1.age, p2.age)
+
+
+
+    function Dog (name,age) {
+      this.name = name
+      this.age = age
+    }
+    Dog.prototype.run = function () {
+      console.log('跑的很快')
+    }
+    var d1 = new Dog('小黑', 2)
+    // d1.run() //可以
+    // Dog.run()//不可以
+    //构造函数显示原型身上的属性或者方法 是给实例化对象用的 构造函数可以用吗  不可以！！！！
+    //构造函数 protype 身上的方法 是给  new出来 赋值的那个 实例化对象用的   构造函数 本身并不可以用
+
+
+
+    function Dog (name,age) {
+      this.name = name
+      this.age = age
+    }
+    Dog.run = function () {
+      console.log('跑的很快')
+    }
+    console.log(Dog.run)
+    var d1 = new Dog('小黑', 2)
+    d1.run()//不可以
+    Dog.run()//可以
+    // 咱们把Dog当作对象来用了  只有Dog能用这个run  Dog的实例化对象是用不了的
+  </script>
+</body>
+
+</html>

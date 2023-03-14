@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.
+    // var a = 10;
+    // var b = 20;
+    // function add (a, b) {
+    //   a = 40;
+    //   return a + b
+    // }
+    // add(a, b)
+    // console.log(a, b)
+      var a=10;
+      var b=20;
+      function add(a,b){
+        a=40;
+        return a+b
+      }
+      add(a,b)
+      console.log(a,b)
+    // 2.
+    var arr = [1, 2, 3, 4]
+    var a = 10;
+    var b = 20;
+    function fn (arr) {
+      var a = 100;
+      b = 200;
+      console.log(a);
+      console.log(b);
+    }
+    fn(arr);
+    fn(arr);
+    fn(arr);
+    console.log(arr);
+    console.log(a);
+    console.log(b); 
+    // 只要函数调用 不管几次 每一个都会创建执行上下文环境
+
+    // 基本数据类型变量名和值都放在栈内存当中
+    // 对象数据类型(数组 函数  对象)变量名在栈内存中 数据在堆内存当中(堆内存 其实存的就是地址值)
+  </script>
+</body>
+
+</html>

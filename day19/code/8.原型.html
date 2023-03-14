@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Dog(name,age){
+      this.name = name 
+      this.age = age 
+    }
+    Dog.prototype.eat=function(){
+      console.log('爱吃狗粮')
+    }
+    var d1 = new Dog('小黄',5)
+
+
+    // console.dir(Dog)
+    // d1.eat()
+    // d2.eat()
+    // console.log(d1)
+    // console.log(d2)
+
+
+    // 显示原型 prototype 只要是函数就有  
+    //          函数是函数 函数也是对象 所以函数不昂有prototype  还有__proto__
+    // 隐式原型 本质__proto__  浏览器打印长这样[[Prototype]] 只要是对象就有
+  </script>
+</body>
+</html>

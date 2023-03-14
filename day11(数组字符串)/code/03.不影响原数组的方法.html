@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //console.dir(Array)
+    // 不影响原数组的方法
+    var arr = [1,3,5,7]
+    // 1.join ******
+    // 功能：以指定的连接符连接数组中的数据
+    // 参数：什么都不写 空串 指定的连接符
+    // 返回值；返回连接后的字符串
+    //       参数什么都不写  '1,3,5,7'
+    //       参数空串    '1357'
+    // console.log(arr.join('*'))
+    
+    // 2.forEach *******
+    // 功能：遍历数组
+    // 参数；一个函数 函数的形参可以接受两个 item(数组当中的每个元素)  index(数组当中的每个元素对应的下标)
+    // 返回值；没有 undefined
+    // console.log(arr.forEach(function(item,index){
+    //   console.log(item,'item')
+    //   console.log(index,'index')
+    // }))
+    
+    // 3.slice
+    // 功能：截取指定的元素
+    // 参数：第一个起始下标 第二结束下标 包含起始 但是不包含结束
+    //       只写一个参数 从起始位置一直截取到末尾
+    // 返回值：截取到的元素组成的数组
+    // console.log(arr.slice(1))
+    // console.log(arr)
+    
+    var arr = [1,3,5,7]
+    // 4.concat
+    // 功能：拼接数组或者数组当中拼接元素
+    // 参数：可以是元素  也可以是数组
+    // 返回值；拼接完成后的数组
+    // console.log(arr.concat(6,8))
+    // console.log(arr.concat([2,4,6,8]))
+    // console.log(arr)
+
+    // 5.toString
+    // 功能；把数组变成字符串
+    // 参数；无
+    // 返回值；数组中的内容加引号  '1,3,5,7'
+    // console.log(arr.toString())
+    // console.log({}.toString()) //'[object Object]'
+    // console.log(function fn(){}.toString()) //函数表面的字符串形式
+    
+    // 6.indexOf
+    // 功能；在数组当中查找有没有某个元素
+    // 参数：可以写两个 第一个参数代表你要查找的子串内容 第二个参数代表你要从哪个下标开始查
+    // 返回值:找到了返回子串的下标  找不到返回-1
+    // console.log(arr.indexOf(88))
+      
+    var arr = [1,3,5,7]
+    // 7.map *********
+    // 功能；映射出来一个新数组  暗含遍历
+    // 参数；一个函数 函数的形参可以拿到元素和下标
+    // 返回值；一个新的数组 
+    // var newArr = arr.map(function(item,index){
+    //   return item+1
+    // })
+    // console.log(newArr)
+      
+    // 8.filter *********
+    // 功能；过滤出来一个新数组
+    // 参数；一个函数 函数的形参可以拿到元素和下标
+    // 返回值:过滤出符合条件的元素组成的数组
+    // var newArr = arr.filter(function(item,index,arr){
+    //   // console.log(arr,'arr')
+    //   return item>2
+    // })
+    // console.log(newArr)
+    
+    // 9.every ***********
+    // 功能；判断数组当中的每一项是否都符合条件
+    // 参数；一个函数 函数的形参可以拿到元素和下标
+    // 返回值；都满足条件就是true  有一个不满足那么就是false
+    // var flag = arr.every(function(item,index){
+    //   return item>2
+    // })
+    // console.log(flag)
+  
+    var arr = [1,3,5,7]
+    // 10.some *********
+    // 功能:判断数组当中的某一个元素是否符合条件
+    // 参数:一个函数 函数的形参可以拿到元素和下标
+    // 返回值:有一个满足条件就是true  都不满足就是false
+    // var flag = arr.some(function(item,index){
+    //   return item ==6
+    // })
+    // console.log(flag)
+     
+    // 11.find***********
+    // 功能:查找数组当中符合这个条件的元素
+    // 参数；一个函数 函数的形参可以拿到元素和下标
+    // 返回值；多个都符合 只要第一个符合条件的 剩下的不要
+    //        没有符合条件的元素  那么结果是undefined
+    // var one = arr.find(function(item,index){
+    //   return item>8
+    // })
+    // console.log(one)
+     
+    var arr = [1,3,5,7]
+    // 12.reduce***********
+    // 功能:累加器
+    // arr.reduce(function(上一次的值,每项元素,每项元素对应的下标){
+    //   return 值
+    // },初始值)
+
+    // 正常情况
+    // 参数；一个函数 这个函数有三个形参 上一次的值 每项元素 每项元素对应的下标
+    //      初始值 首次执行时初始值会给prev赋值  prev之后每次的值取决于return的值
+    // 返回值:累加之后的结果
+    // var result = arr.reduce(function(prev,item,index){
+    //   return prev+item
+    // },0)
+    // console.log(result)
+      
+    // 特殊情况
+    // 参数；一个函数 这个函数有三个形参 上一次的值 每项元素 没想元素对应的下标
+    // 执行过程  prev拿数组当中的第一项做为初始值  item从数组第二项开始遍历
+    // 返回值:累加之后的结果
+    // var result = arr.reduce(function(prev,item,index){
+    //   return prev+item
+    // })
+    //console.log(result)
+    
+  </script>
+</body>
+</html>

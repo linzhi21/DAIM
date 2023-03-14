@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 自增自减表达式
+    // ++  --
+    // 这两个运算符只能和变量组成表达式 如果写成1++  不可以！
+    // ++ 让变量自身加1
+    // -- 让变量自身减1
+
+    // 一定要区分开  a 和 a++  a是变量 a++是表达式
+
+    // 口诀：
+    // 1.变量在表达式得前面，先赋值(先拿到变量的值赋值给整体得表达式)，后自增1或者自减1(变量偷摸得自增1或者自减1)
+    // 2.变量在表达式得后面，先自增1或者自减1(变量得自增1或者自减1)，后赋值(会拿到最新得变量得值赋值给表达式整体)
+
+    // 四种情况  a++  ++a  a-- --a
+    // var a = 1
+    // a++
+    // console.log(a)  //2
+
+
+    // var a = 21
+    // a++ //21 
+    // // ++a
+    // a--
+    // --a
+    // console.log( a++,a)
+    // ++a,
+    // a--,
+    // --a);
+
+
+    // var a=1
+    // a++
+    // console.log(a++);
+
+   
+
+    // var b = 11
+    // ++b
+    // console.log(b,b++) //b 12  
+
+    // var c = 111
+    // c--
+    // console.log(c,c--) //
+
+    // var d = 1111
+    // --d
+    // console.log(d,--d) //1110 
+
+    // 表达式
+    // var a = 1
+    // // console.log(a++) //1
+    // console.log(++a) //2
+
+    // 1.变量在表达式得前面，先赋值(先拿到变量的值赋值给整体得表达式)，后自增1或者自减1(变量偷摸得自增1或者自减1)
+    // var a = 3
+    // console.log(a++)
+    // console.log(a)
+
+    
+    // var a = 2;
+    // var b = 3;
+    // var c = a + b++; // a==>2 b++==>3 b==>4  c==>5
+    // c = ++a + b++; // a==>3  ++a==>3  b++==>4 b==>5  c==>7
+    // c = a + b--; //a==>3 b--==>5 b==>4 c==>8
+    // console.log(a,b,c)
+
+    // 1.变量在表达式得前面，先赋值(先拿到变量的值赋值给整体得表达式)，后自增1或者自减1(变量偷摸得自增1或者自减1)
+    // 2.变量在表达式得后面，先自增1或者自减1(变量得自增1或者自减1)，后赋值(会拿到最新得变量得值赋值给表达式整体)
+    // var a = 11;
+    // var b = 13;
+    // var c = --a + b--;//a==>10  --a==>10   b--==>13  b==>12  c==>23
+    // // console.log(a,b,c)
+    // c = ++a + b++;//++a  11  a 11  b++ 12  b  13 c 23
+    // // console.log(a,b,c)
+    // c = b-- + a++;//b-- 13  b 12 a++ 11 a 12 c 24
+    // // console.log(a,b,c)
+    // c = ++a + b++; //++a 13 a 13 b++ 12 b 13  c 25
+    // console.log(a,b,c)
+    var x=1
+    console.log(x++);
+  </script>
+</body>
+</html>
